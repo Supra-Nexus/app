@@ -1,12 +1,13 @@
 {
-  "name": "@shinkai/source",
+  "name": "@hanzo/source",
   "version": "1.1.13",
   "license": "SEE LICENSE IN LICENSE",
   "files": [
     "LICENSE"
   ],
   "scripts": {
-    "postinstall": "npx patch-package"
+    "postinstall": "npx patch-package",
+    "test:contrast": "vitest run libs/hanzo-ui/src/utils/contrast.test.ts"
   },
   "dependencies": {
     "@babel/standalone": "^7.26.1",

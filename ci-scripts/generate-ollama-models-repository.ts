@@ -126,7 +126,7 @@ const main = async () => {
     });
   const outputPath = path.join(
     __dirname,
-    '../apps/shinkai-desktop/src/lib/shinkai-node-manager/ollama-models-repository.json',
+    '../apps/hanzo-desktop/src/lib/hanzo-node-manager/ollama-models-repository.json',
   );
   fs.writeFileSync(outputPath, JSON.stringify(models, null, 2), 'utf8');
   console.log(`Models data has been written to ${outputPath}`);
