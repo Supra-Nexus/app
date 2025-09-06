@@ -1,4 +1,4 @@
-# Hanzo Desktop Application - LLM Context
+# Hanzo Application - LLM Context
 
 ## Project Overview
 Hanzo Desktop is a privacy-focused AI assistant application built with Tauri 2.x, React, and TypeScript. It provides local AI capabilities through a desktop interface with support for multiple platforms including macOS, Windows, Linux, iOS, and Android.

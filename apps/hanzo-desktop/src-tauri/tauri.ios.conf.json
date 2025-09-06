@@ -1,0 +1,13 @@
+{
+  "bundle": {
+    "active": true,
+    "targets": ["ios"],
+    "externalBin": [],
+    "resources": [],
+    "iOS": {
+      "developmentTeam": "YOUR_TEAM_ID"
+    }
+  },
+  "productName": "Hanzo",
+  "identifier": "com.hanzo.app"
+}
