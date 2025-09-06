@@ -27,7 +27,7 @@
     },
     "createUpdaterArtifacts": "v1Compatible"
   },
-  "productName": "Hanzo Desktop",
+  "productName": "Hanzo",
   "version": "../../../package.json",
   "identifier": "com.hanzo.desktop",
   "plugins": {
@@ -54,7 +54,7 @@
     "windows": [
       {
         "transparent": true,
-        "title": "Hanzo Desktop",
+        "title": "Hanzo",
         "width": 1280,
         "height": 840,
         "resizable": true,

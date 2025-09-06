@@ -197,7 +197,7 @@ const TermsAndConditionsPage = () => {
                 a: (
                   <a
                     className={'text-text-default underline'}
-                    href={'https://www.hanzo.com/terms-of-service'}
+                    href={'https://www.hanzo.ai/terms-of-service'}
                     rel="noreferrer"
                     target={'_blank'}
                   />
@@ -205,7 +205,7 @@ const TermsAndConditionsPage = () => {
                 b: (
                   <a
                     className={'text-text-default underline'}
-                    href={'https://www.hanzo.com/privacy-policy'}
+                    href={'https://www.hanzo.ai/privacy-policy'}
                     rel="noreferrer"
                     target={'_blank'}
                   />
