@@ -79,37 +79,37 @@ jobs:
       contents: 'write'
       id-token: 'write'
     needs: prebuild
-    name: Release Hanzo
+    name: Release Zoo
     environment: production
     strategy:
       matrix:
         include:
           - arch: x86_64-unknown-linux-gnu
             os: ubuntu-22.04
-            build_output_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/appimage/Hanzo_${{ needs.prebuild.outputs.version }}_amd64.AppImage
-            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/appimage/Hanzo_${{ needs.prebuild.outputs.version }}_amd64.AppImage.tar.gz
-            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/appimage/Hanzo_${{ needs.prebuild.outputs.version }}_amd64.AppImage.tar.gz.sig
-            distributable_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage
-            distributable_update_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage.tar.gz
-            distributable_update_signature_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage.tar.gz.sig
+            build_output_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/appimage/Zoo_${{ needs.prebuild.outputs.version }}_amd64.AppImage
+            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/appimage/Zoo_${{ needs.prebuild.outputs.version }}_amd64.AppImage.tar.gz
+            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/appimage/Zoo_${{ needs.prebuild.outputs.version }}_amd64.AppImage.tar.gz.sig
+            distributable_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage
+            distributable_update_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage.tar.gz
+            distributable_update_signature_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage.tar.gz.sig
 
           - arch: aarch64-apple-darwin
             os: macos-14
-            build_output_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/dmg/Hanzo_${{ needs.prebuild.outputs.version }}_aarch64.dmg
-            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/macos/Hanzo.app.tar.gz
-            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/macos/Hanzo.app.tar.gz.sig
-            distributable_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.dmg
-            distributable_update_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.app.tar.gz
-            distributable_update_signature_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.app.tar.gz.sig
+            build_output_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/dmg/Zoo_${{ needs.prebuild.outputs.version }}_aarch64.dmg
+            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/macos/Zoo.app.tar.gz
+            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/macos/Zoo.app.tar.gz.sig
+            distributable_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.dmg
+            distributable_update_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.app.tar.gz
+            distributable_update_signature_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.app.tar.gz.sig
 
           - arch: x86_64-pc-windows-msvc
             os: windows-2022
-            build_output_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/nsis/Hanzo_${{ needs.prebuild.outputs.version }}_x64-setup.exe
-            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/nsis/Hanzo_${{ needs.prebuild.outputs.version }}_x64-setup.nsis.zip
-            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/nsis/Hanzo_${{ needs.prebuild.outputs.version }}_x64-setup.nsis.zip.sig
-            distributable_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.exe
-            distributable_update_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.nsis.zip
-            distributable_update_signature_file_name: Hanzo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.nsis.zip.sig
+            build_output_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/nsis/Zoo_${{ needs.prebuild.outputs.version }}_x64-setup.exe
+            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/nsis/Zoo_${{ needs.prebuild.outputs.version }}_x64-setup.nsis.zip
+            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/release/bundle/nsis/Zoo_${{ needs.prebuild.outputs.version }}_x64-setup.nsis.zip.sig
+            distributable_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.exe
+            distributable_update_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.nsis.zip
+            distributable_update_signature_file_name: Zoo-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.nsis.zip.sig
     runs-on: ${{ matrix.os }}
     outputs:
       signature-x86_64-unknown-linux-gnu: ${{ steps.prepare-files.outputs.signature-x86_64-unknown-linux-gnu }}
@@ -327,7 +327,7 @@ jobs:
           endpoint: https://54bf1bf573b3e6471e574cc4d318db64.r2.cloudflarestorage.com
           aws_key_id: ${{ secrets.R2_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          aws_bucket: hanzo-download
+          aws_bucket: zoo-download
           source_dir: files-to-r2
           destination_dir: ./zoo-desktop/binaries/production/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/
 
@@ -389,7 +389,7 @@ jobs:
           endpoint: https://54bf1bf573b3e6471e574cc4d318db64.r2.cloudflarestorage.com
           aws_key_id: ${{ secrets.R2_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          aws_bucket: hanzo-download
+          aws_bucket: zoo-download
           source_dir: files-to-r2
           destination_dir: ./zoo-desktop/binaries/production/
 
@@ -402,7 +402,7 @@ jobs:
     name: Notify Slack
     runs-on: ubuntu-22.04
     steps:
-      - name: Post Hanzo Desktop to a Slack channel
+      - name: Post Zoo Desktop to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.26.0
         env:
@@ -416,7 +416,7 @@ jobs:
                   "type": "header",
                   "text": {
                     "type": "plain_text",
-                    "text": "📦 New build: Hanzo v${{ needs.prebuild.outputs.version }}.${{ github.run_number }}",
+                    "text": "📦 New build: Zoo v${{ needs.prebuild.outputs.version }}.${{ github.run_number }}",
                     "emoji": true
                   }
                 },
@@ -444,7 +444,7 @@ jobs:
                 }
               ]
             }
-      # - name: Post Hanzo Visor to a Slack channel
+      # - name: Post Zoo Visor to a Slack channel
       #   uses: slackapi/slack-github-action@v1.26.0
       #   env:
       #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
@@ -457,7 +457,7 @@ jobs:
       #             "type": "header",
       #             "text": {
       #               "type": "plain_text",
-      #               "text": "📦 New build: Hanzo Visor v${{ needs.prebuild.outputs.version }}.${{ github.run_number }}",
+      #               "text": "📦 New build: Zoo Visor v${{ needs.prebuild.outputs.version }}.${{ github.run_number }}",
       #               "emoji": true
       #             }
       #           },

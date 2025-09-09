@@ -8077,7 +8077,7 @@ dependencies = [
 
 [[package]]
 name = "zoo-desktop"
-version = "0.0.0"
+version = "1.1.15"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
