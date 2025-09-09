@@ -15,7 +15,7 @@
 </p>
 
 <p align = "center">
-<a href = "https://github.com/dcspark/app/stargazers"> <img src = "https://img.shields.io/github/stars/dcspark/app？style = social"
+<a href = "https://github.com/zooai/app/stargazers"> <img src = "https://img.shields.io/github/stars/zooai/app？style = social"
 <a href = "https://discord.gg/eua45u3seu"> <img src = "https://img.shields.io/discord/130374922084234040412?color=7289da&label = Discord＆logo = ddiscolorod＆logododalt = "discord"> </a>
 <a href = "https://x.com/hanzolocalai"> <img src = "https://img.shields.io/twitter/follow/hanzolococalai？style = social" alt = "Twitterフォロー"> </a>
 </p>
@@ -288,7 +288,7 @@ npx nx run hanzo-i18n:i18n
 <p align = "center">
 <strong> Hanzoコミュニティによって❤§で構築されました</strong>
 <br/>
-<a href = "https://github.com/dcspark/app/blob/main/license"> apacheライセンス</a>•
-<a href = "https://github.com/dcspark/app/issues">レポートbug </a>•
-<a href = "https://github.com/dcspark/app/issues">リクエスト機能</a>
+<a href = "https://github.com/zooai/app/blob/main/license"> apacheライセンス</a>•
+<a href = "https://github.com/zooai/app/issues">レポートbug </a>•
+<a href = "https://github.com/zooai/app/issues">リクエスト機能</a>
 </p>

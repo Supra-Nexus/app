@@ -28,6 +28,8 @@ use crate::commands::mcp_clients_install::{
 };
 use crate::commands::logs::{download_logs, retrieve_logs};
 use crate::commands::spotlight_commands::{hide_spotlight_window_app, show_spotlight_window_app, open_main_window_with_path_app};
+use crate::commands::debug_commands::{write_debug_log, save_debug_logs, get_debug_logs_path, open_debug_logs_folder};
+use crate::commands::store_mock::{get_store_mock_response, store_api_proxy};
 use deep_links::setup_deep_links;
 use global_shortcuts::global_shortcut_handler;
 use globals::ZOO_NODE_MANAGER_INSTANCE;
@@ -137,6 +139,12 @@ fn main() {
             register_sse_server_in_cursor,
             get_cursor_command_config_help,
             get_cursor_sse_config_help,
+            write_debug_log,
+            save_debug_logs,
+            get_debug_logs_path,
+            open_debug_logs_folder,
+            get_store_mock_response,
+            store_api_proxy,
         ])
         .setup(|app| {
             log::info!("starting app version: {}", env!("CARGO_PKG_VERSION"));

@@ -15,7 +15,7 @@ Hanzo
 </p>
 
 <p align =“中心”>
-<a href =“ https://github.com/dcspark/app/stargazers”> <img src =“ https://img.shields.io/github/github/github/dcspark/dcspark/dcspark/hanzo-app?style=social=Social=Social=Social alt alt alt alt =”
+<a href =“ https://github.com/zooai/app/stargazers”> <img src =“ https://img.shields.io/github/github/github/zooai/zooai/zooai/hanzo-app?style=social=Social=Social=Social alt alt alt alt =”
 <A href =“ https://discord.gg/eua45u3seu”> <img src =“ https://img.shields.io/discord/1303749220842340412？alt =“ Discord”> </a>
 <a href =“ https://x.com/hanzolocalai”> <img src =“ https://img.shields.io/twitter/twitter/twitter/follow/hanzolocalai?style?style=social = social” alt alt =“ twitter” twitter cont
 </p>
@@ -85,7 +85,7 @@ _watch Hanzo代理商合作分析市场数据，执行交易并自动管理复�
 
 ###一键安装
 
-1。**下载**您的平台的最新版本从我们的[发行页]（https://github.com/dcspark/app/releases）
+1。**下载**您的平台的最新版本从我们的[发行页]（https://github.com/zooai/app/releases）
 2。**安装**并启动Hanzo
 3。**创建**您的第一个AI代理使用我们的分步导界面
 
@@ -288,7 +288,7 @@ npx nx run hanzo-i18n:i18n
 <p align =“中心”>
 <strong>由Hanzo Community建造的❤️</strong>
 <br/>
-<a href =“ https://github.com/dcspark/app/blob/main/license”> apache许可证</a>•
-<a href =“ https://github.com/dcspark/app/issues”>报告错误</a>•
-<a href =“ https://github.com/dcspark/app/issues”>请求功能</a>
+<a href =“ https://github.com/zooai/app/blob/main/license”> apache许可证</a>•
+<a href =“ https://github.com/zooai/app/issues”>报告错误</a>•
+<a href =“ https://github.com/zooai/app/issues”>请求功能</a>
 </p>

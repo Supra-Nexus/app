@@ -1,5 +1,6 @@
 import { type QueryObserverOptions, useQuery } from '@tanstack/react-query';
 import { invoke } from '@tauri-apps/api/core';
+import storeMockResponses from '../../lib/store-mock-responses.json';
 
 export const storeKeys = {
   all: ['store'] as const,
@@ -50,31 +51,64 @@ export type UseGetStoreAgentsOptions = QueryObserverOptions<
 >;
 
 const getStoreAgents = async (): Promise<FormattedStoreAgent[]> => {
-  const res = await invoke<{
-    status: number;
-    headers: Record<string, string[]>;
-    body: string;
-  }>('get_request', {
-    url: 'https://store-api.zoo.ngo/store/products?page=1&limit=10&sort=newest&type=agent',
-    customHeaders: JSON.stringify({}),
-  });
+  try {
+    // Try the real API first
+    const res = await invoke<{
+      status: number;
+      headers: Record<string, string[]>;
+      body: string;
+    }>('get_request', {
+      url: 'https://store-api.zoo.ngo/store/products?page=1&limit=10&sort=newest&type=agent',
+      customHeaders: JSON.stringify({}),
+    });
 
-  if (res.status !== 200) {
-    throw new Error(`Request failed: ${res.status}`);
+    if (res.status === 200) {
+      const data = JSON.parse(res.body) as { products: StoreProduct[] };
+      return data.products.map((item) => ({
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        author: item.author,
+        downloads: item.downloads,
+        iconUrl: item.icon_url,
+        routerKey: item.routerKey,
+        category: item.category,
+      }));
+    }
+  } catch (error) {
+    console.log('Store API not available, using mock data');
   }
 
-  const data = JSON.parse(res.body) as { products: StoreProduct[] };
-
-  return data.products.map((item) => ({
-    id: item.id,
-    name: item.name,
-    description: item.description,
-    author: item.author,
-    downloads: item.downloads,
-    iconUrl: item.icon_url,
-    routerKey: item.routerKey,
-    category: item.category,
-  }));
+  // Fall back to mock data served by our backend
+  try {
+    const mockData = await invoke<any>('store_api_proxy', {
+      url: 'https://store-api.zoo.ngo/store/products?page=1&limit=10&sort=newest&type=agent'
+    });
+    
+    return mockData.products.map((item: any) => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      author: item.author,
+      downloads: item.downloads,
+      iconUrl: item.icon_url,
+      routerKey: item.router_key,
+      category: item.category,
+    }));
+  } catch (mockError) {
+    console.error('Mock data also failed, using hardcoded fallback', mockError);
+    // Final fallback - use the imported JSON directly
+    return storeMockResponses.agents.products.map((item) => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      author: item.author,
+      downloads: item.downloads,
+      iconUrl: item.icon_url,
+      routerKey: item.router_key,
+      category: item.category,
+    }));
+  }
 };
 
 export const useGetStoreAgents = (

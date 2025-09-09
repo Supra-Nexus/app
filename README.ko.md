@@ -15,7 +15,7 @@
 </p>
 
 <p align = "Center">
-<a href = "https://github.com/dcspark/app/stargazers"> <img src = "https://img.shields.io/github/stars/dcspark/app?style=social"github Stars "> </a>
+<a href = "https://github.com/zooai/app/stargazers"> <img src = "https://img.shields.io/github/stars/zooai/app?style=social"github Stars "> </a>
 <a href = "https://discord.gg/eua45u3seu"> <img src = "https://img.shields.io/discord/1303749220842340412?color=7289da&label iscord&logo=DISCORD&LOGUCORD>alt = "discord"> </a>
 <a href = "https://x.com/hanzolocalai"> <img src = "https://img.shields.io/twitter/follow/hanzolocalai?style=social"alt = "twitter follow"> </a>
 </p>
@@ -85,7 +85,7 @@ _watch Hanzo 에이전트는 시장 데이터를 분석하고 거래를 실행�
 
 ### 한 클릭 설치
 
-1. ** 다운로드 ** [Releases Page] (https://github.com/dcspark/app/releases)에서 플랫폼의 최신 릴리스
+1. ** 다운로드 ** [Releases Page] (https://github.com/zooai/app/releases)에서 플랫폼의 최신 릴리스
 2. ** 설치 ** 및 Hanzo를 시작하십시오
 3. ** 단계별 가이드 인터페이스를 사용하여 첫 번째 AI 에이전트 작성 **
 
@@ -288,7 +288,7 @@ npx nx run hanzo-i18n:i18n
 <p align = "Center">
 <strong> Hanzo Community </strong>에 의해 with️로 건축되었습니다
 <br/>
-<a href = "https://github.com/dcspark/app/blob/main/license"> apache 라이센스 </a> •
-<a href = "https://github.com/dcspark/app/issues"> 보고서 </a> •
-<a href = "https://github.com/dcspark/app/issues"> 요청 기능 </a>
+<a href = "https://github.com/zooai/app/blob/main/license"> apache 라이센스 </a> •
+<a href = "https://github.com/zooai/app/issues"> 보고서 </a> •
+<a href = "https://github.com/zooai/app/issues"> 요청 기능 </a>
 </p>

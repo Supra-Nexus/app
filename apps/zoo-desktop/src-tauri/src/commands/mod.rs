@@ -6,3 +6,4 @@ pub mod zoo_node_manager_commands;
 pub mod mcp_clients_install;
 pub mod spotlight_commands;
 pub mod debug_commands;
+pub mod store_mock;

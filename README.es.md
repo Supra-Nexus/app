@@ -15,7 +15,7 @@ Hanzo
 </p>
 
 <p align = "centro">
-<a href = "https://github.com/dcspark/app/stargazers"> <img src = "https://img.shields.io/github/stars/dcspark/hanzopps?style=social" Alt = "Github Stars"> </a>
+<a href = "https://github.com/zooai/app/stargazers"> <img src = "https://img.shields.io/github/stars/zooai/hanzopps?style=social" Alt = "Github Stars"> </a>
 <a href = "https://discord.gg/eua45u3seu"> <img src = "https://img.shields.io/discord/130374922084234040412?color=7289da&label=discord&logo=discord&logord&logocord&logocord&logocord&logocord&logoCord&logoCord&logoCord&logocolor=white"Alt = "Discord"> </a>
 <a href = "https://x.com/hanzolocalai"> <img src = "https://img.shields.io/twitter/follow/hanzolocalai?style=Social" alt = "Twitter sigue"> </a>
 </p>
@@ -85,7 +85,7 @@ _ Los agentes de Hanzo de observación colaboran para analizar los datos del mer
 
 ### Instalación de un solo clic
 
-1. ** Descargar ** La última versión para su plataforma desde nuestra [página de comunicados] (https://github.com/dcspark/app/releases)
+1. ** Descargar ** La última versión para su plataforma desde nuestra [página de comunicados] (https://github.com/zooai/app/releases)
 2. ** Instalar ** y lanzar Hanzo
 3. ** Crear ** Su primer agente de IA usando nuestra interfaz guiada paso a paso
 
@@ -288,7 +288,7 @@ npx nx run hanzo-i18n:i18n
 <p align = "centro">
 <strong> construido con ❤️ por la comunidad Hanzo </strong>
 <br/>
-<a href = "https://github.com/dcspark/app/blob/main/license"> Licencia Apache </a> •
-<a href = "https://github.com/dcspark/app/issues"> Informe de informe </a> •
-<a href = "https://github.com/dcspark/app/issues"> función de solicitud </a>
+<a href = "https://github.com/zooai/app/blob/main/license"> Licencia Apache </a> •
+<a href = "https://github.com/zooai/app/issues"> Informe de informe </a> •
+<a href = "https://github.com/zooai/app/issues"> función de solicitud </a>
 </p>
