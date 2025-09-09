@@ -91,7 +91,7 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
       - name: Build iOS app
-        working-directory: apps/hanzo-desktop
+        working-directory: apps/zoo-desktop
         run: |
           npx tauri ios init || true
           npx tauri ios build --export-method app-store
@@ -103,7 +103,7 @@ jobs:
         run: |
           xcrun altool --upload-app \
             --type ios \
-            --file "apps/hanzo-desktop/src-tauri/gen/apple/build/arm64/Hanzo.ipa" \
+            --file "apps/zoo-desktop/src-tauri/gen/apple/build/arm64/Hanzo.ipa" \
             --username "${{ secrets.APPLE_ID }}" \
             --password "${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}"
 
@@ -111,7 +111,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          files: apps/hanzo-desktop/src-tauri/gen/apple/build/arm64/Hanzo.ipa
+          files: apps/zoo-desktop/src-tauri/gen/apple/build/arm64/Hanzo.ipa
 
   release-android:
     if: ${{ github.event.inputs.platform == 'all' || github.event.inputs.platform == 'android' || github.event_name == 'push' }}
@@ -152,10 +152,10 @@ jobs:
         env:
           ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE }}
         run: |
-          echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > apps/hanzo-desktop/src-tauri/gen/android/keystore.jks
+          echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > apps/zoo-desktop/src-tauri/gen/android/keystore.jks
 
       - name: Build Android app
-        working-directory: apps/hanzo-desktop
+        working-directory: apps/zoo-desktop
         run: |
           npx tauri android init || true
           npx tauri android build --release
@@ -170,15 +170,15 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           files: |
-            apps/hanzo-desktop/src-tauri/gen/android/app/build/outputs/apk/release/app-release.apk
-            apps/hanzo-desktop/src-tauri/gen/android/app/build/outputs/bundle/release/app-release.aab
+            apps/zoo-desktop/src-tauri/gen/android/app/build/outputs/apk/release/app-release.apk
+            apps/zoo-desktop/src-tauri/gen/android/app/build/outputs/bundle/release/app-release.aab
 
       - name: Upload to Google Play Console
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
           packageName: ai.hanzo.app
-          releaseFiles: apps/hanzo-desktop/src-tauri/gen/android/app/build/outputs/bundle/release/app-release.aab
+          releaseFiles: apps/zoo-desktop/src-tauri/gen/android/app/build/outputs/bundle/release/app-release.aab
           track: internal
           status: draft
 

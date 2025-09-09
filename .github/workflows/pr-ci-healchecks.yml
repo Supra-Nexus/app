@@ -55,9 +55,9 @@ jobs:
           OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
         run: |
           npx nx run-many -t lint,test --parallel=3 --skip-nx-cache --verbose
-          npx nx run-many -t build --parallel=3 --skip-nx-cache --verbose --exclude=hanzo-desktop
-          npx nx cargo-check hanzo-desktop
-          npx nx typecheck hanzo-desktop
+          npx nx run-many -t build --parallel=3 --skip-nx-cache --verbose --exclude=zoo-desktop
+          npx nx cargo-check zoo-desktop
+          npx nx typecheck zoo-desktop
 
       - name: Run UI Contrast Tests
         run: |

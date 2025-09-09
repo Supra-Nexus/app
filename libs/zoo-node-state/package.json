@@ -1,0 +1,29 @@
+{
+  "name": "@zooai/zoo-node-state",
+  "version": "0.0.1",
+  "description": "Zoo AI Node State Management - State management for Zoo AI nodes",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zooai/zoo-desktop.git"
+  },
+  "keywords": ["zoo", "ai", "state", "management", "node"],
+  "author": "Zoo AI",
+  "license": "MIT",
+  "homepage": "https://github.com/zooai/zoo-desktop",
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0"
+  }
+}

@@ -1,0 +1,65 @@
+import {
+  AnthropicIcon,
+  AyaCohereIcon,
+  DeepSeekIcon,
+  ExoIcon,
+  GeminiIcon,
+  GoogleIcon,
+  GrokIcon,
+  GroqIcon,
+  LmStudioIcon,
+  MetaIcon,
+  MistralIcon,
+  OllamaIcon,
+  OpenAIIcon,
+  OpenRouterIcon,
+  PerplexityIcon,
+  QwenIcon,
+  ZooIcon,
+  TogetherAI,
+} from '@zooai/zoo-ui/assets';
+import { ShieldCheck } from 'lucide-react';
+
+export enum ModelProvider {
+  Aya = 'aya',
+  Claude = 'claude',
+  DeepSeek = 'deepseek',
+  Exo = 'exo',
+  Gemini = 'gemini',
+  Google = 'google',
+  Grok = 'grok',
+  Groq = 'groq',
+  LmStudio = 'lmstudio',
+  Meta = 'meta',
+  Mistral = 'mistral',
+  Ollama = 'ollama',
+  OpenAI = 'openai',
+  OpenRouter = 'openrouter',
+  Perplexity = 'perplexity',
+  Qwen = 'qwen',
+  'Zoo-Backend' = 'zoo-backend',
+  TogetherAI = 'togetherai',
+}
+
+export type ModelProviderKey = Lowercase<keyof typeof ModelProvider>;
+
+export const providerMappings = {
+  [ModelProvider.Aya]: AyaCohereIcon,
+  [ModelProvider.Claude]: AnthropicIcon,
+  [ModelProvider.DeepSeek]: DeepSeekIcon,
+  [ModelProvider.Exo]: ExoIcon,
+  [ModelProvider.Gemini]: GeminiIcon,
+  [ModelProvider.Google]: GoogleIcon,
+  [ModelProvider.Grok]: GrokIcon,
+  [ModelProvider.Groq]: GroqIcon,
+  [ModelProvider.LmStudio]: LmStudioIcon,
+  [ModelProvider.Mistral]: MistralIcon,
+  [ModelProvider.Meta]: MetaIcon,
+  [ModelProvider.Ollama]: ShieldCheck,  // Privacy icon for local models
+  [ModelProvider.OpenAI]: OpenAIIcon,
+  [ModelProvider.OpenRouter]: OpenRouterIcon,
+  [ModelProvider.Perplexity]: PerplexityIcon,
+  [ModelProvider.Qwen]: QwenIcon,
+  [ModelProvider['Zoo-Backend']]: ZooIcon,
+  [ModelProvider.TogetherAI]: TogetherAI,
+};

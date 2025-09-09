@@ -73,7 +73,7 @@ jobs:
   #         if-no-files-found: error
   #         retention-days: 5
 
-  release-hanzo-desktop:
+  release-zoo-desktop:
     needs: prebuild
     name: Release Hanzo Desktop
     environment: development
@@ -82,27 +82,27 @@ jobs:
         include:
           - arch: x86_64-unknown-linux-gnu
             os: ubuntu-22.04
-            build_output_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/appimage/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_amd64.AppImage
-            build_output_update_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/appimage/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_amd64.AppImage.tar.gz
-            build_output_update_signature_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/appimage/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_amd64.AppImage.tar.gz.sig
+            build_output_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/appimage/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_amd64.AppImage
+            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/appimage/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_amd64.AppImage.tar.gz
+            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/appimage/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_amd64.AppImage.tar.gz.sig
             distributable_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage
             distributable_update_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage.tar.gz
             distributable_update_signature_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-unknown-linux-gnu.AppImage.tar.gz.sig
 
           - arch: aarch64-apple-darwin
             os: macos-14
-            build_output_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/dmg/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_aarch64.dmg
-            build_output_update_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/macos/Hanzo Desktop Dev.app.tar.gz
-            build_output_update_signature_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/macos/Hanzo Desktop Dev.app.tar.gz.sig
+            build_output_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/dmg/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_aarch64.dmg
+            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/macos/Hanzo Desktop Dev.app.tar.gz
+            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/macos/Hanzo Desktop Dev.app.tar.gz.sig
             distributable_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.dmg
             distributable_update_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.app.tar.gz
             distributable_update_signature_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_aarch64-apple-darwin.app.tar.gz.sig
 
           - arch: x86_64-pc-windows-msvc
             os: windows-2022
-            build_output_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/nsis/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_x64-setup.exe
-            build_output_update_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/nsis/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_x64-setup.nsis.zip
-            build_output_update_signature_file_path: apps/hanzo-desktop/src-tauri/target/debug/bundle/nsis/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_x64-setup.nsis.zip.sig
+            build_output_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/nsis/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_x64-setup.exe
+            build_output_update_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/nsis/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_x64-setup.nsis.zip
+            build_output_update_signature_file_path: apps/zoo-desktop/src-tauri/target/debug/bundle/nsis/Hanzo Desktop Dev_${{ needs.prebuild.outputs.version }}${{ github.run_number }}_x64-setup.nsis.zip.sig
             distributable_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.exe
             distributable_update_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.nsis.zip
             distributable_update_signature_file_name: Hanzo-Desktop-Dev-${{ needs.prebuild.outputs.version }}.${{ github.run_number }}_x86_64-pc-windows-msvc.nsis.zip.sig
@@ -205,7 +205,7 @@ jobs:
 
       - name: Setup cargo version from npm
         run: |
-          cd ./apps/hanzo-desktop/src-tauri
+          cd ./apps/zoo-desktop/src-tauri
           cargo install cargo-edit --force
           cargo set-version ${{ needs.prebuild.outputs.version }}
 
@@ -225,18 +225,18 @@ jobs:
         run: |
           npm version ${{ needs.prebuild.outputs.version }}${{ github.run_number }} --git-tag-version false
 
-      - name: (Linux) Run NX build on hanzo-desktop
+      - name: (Linux) Run NX build on zoo-desktop
         if: ${{ matrix.arch == 'x86_64-unknown-linux-gnu' }}
-        run: npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json" --skip-nx-cache --debug
+        run: npx nx build zoo-desktop --config="./src-tauri/tauri.conf.development.json" --skip-nx-cache --debug
         env:
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
           VITE_POSTHOG_API_KEY: ${{ secrets.VITE_POSTHOG_API_KEY }}
           SECRET_DESKTOP_INSTALLATION_PROOF_KEY: ${{secrets.SECRET_DESKTOP_INSTALLATION_PROOF_KEY}}
           NODE_OPTIONS: "--max_old_space_size=8192"
-      - name: (Macos) Run NX build on hanzo-desktop
+      - name: (Macos) Run NX build on zoo-desktop
         if: ${{ matrix.arch == 'aarch64-apple-darwin' }}
-        run: npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json" --skip-nx-cache  --debug
+        run: npx nx build zoo-desktop --config="./src-tauri/tauri.conf.development.json" --skip-nx-cache  --debug
         env:
           APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
           APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
@@ -249,9 +249,9 @@ jobs:
           VITE_POSTHOG_API_KEY: ${{ secrets.VITE_POSTHOG_API_KEY }}
           SECRET_DESKTOP_INSTALLATION_PROOF_KEY: ${{secrets.SECRET_DESKTOP_INSTALLATION_PROOF_KEY}}
           NODE_OPTIONS: "--max_old_space_size=8192"
-      - name: (Windows) Run NX build on hanzo-desktop
+      - name: (Windows) Run NX build on zoo-desktop
         if: ${{ matrix.arch == 'x86_64-pc-windows-msvc' }}
-        run: npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json" --skip-nx-cache  --debug
+        run: npx nx build zoo-desktop --config="./src-tauri/tauri.conf.development.json" --skip-nx-cache  --debug
         env:
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
@@ -270,8 +270,8 @@ jobs:
           cp "${{ matrix.build_output_update_file_path }}" files-to-r2/${{ matrix.distributable_update_file_name }}
           cp "${{ matrix.build_output_update_signature_file_path }}" files-to-r2/${{ matrix.distributable_update_signature_file_name }}
           echo "signature-${{ matrix.arch }}=$(cat files-to-r2/${{ matrix.distributable_update_signature_file_name }})" >> "$GITHUB_OUTPUT"
-          echo "update-url-${{ matrix.arch }}=https://download.hanzo.com/hanzo-desktop/binaries/development/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/${{ matrix.distributable_update_file_name }}" >> "$GITHUB_OUTPUT"
-          echo "app-url-${{ matrix.arch }}=https://download.hanzo.com/hanzo-desktop/binaries/development/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/${{ matrix.distributable_file_name }}" >> "$GITHUB_OUTPUT"
+          echo "update-url-${{ matrix.arch }}=https://download.hanzo.com/zoo-desktop/binaries/development/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/${{ matrix.distributable_update_file_name }}" >> "$GITHUB_OUTPUT"
+          echo "app-url-${{ matrix.arch }}=https://download.hanzo.com/zoo-desktop/binaries/development/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/${{ matrix.distributable_file_name }}" >> "$GITHUB_OUTPUT"
 
       - name: Upload binaries to R2 bucket
         uses: shallwefootball/s3-upload-action@master
@@ -281,13 +281,13 @@ jobs:
           aws_secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           aws_bucket: hanzo-download
           source_dir: files-to-r2
-          destination_dir: ./hanzo-desktop/binaries/development/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/
+          destination_dir: ./zoo-desktop/binaries/development/${{ matrix.arch }}/${{ needs.prebuild.outputs.version }}.${{ github.run_number }}/
 
-  rollout-hanzo-desktop:
+  rollout-zoo-desktop:
     environment: development
     needs:
       - prebuild
-      - release-hanzo-desktop
+      - release-zoo-desktop
     name: Generate & Update updates.json
     runs-on: ubuntu-22.04
     steps:
@@ -315,12 +315,12 @@ jobs:
           JSON_PATH: files-to-r2/updates.json
           VERSION: ${{ needs.prebuild.outputs.version }}${{ github.run_number }}
           NOTES: Automatic update to ${{ needs.prebuild.outputs.version }}${{ github.run_number }}
-          LINUX_x86_64_SIGNATURE: ${{ needs.release-hanzo-desktop.outputs.signature-x86_64-unknown-linux-gnu }}
-          LINUX_x86_64_URL: ${{ needs.release-hanzo-desktop.outputs.update-url-x86_64-unknown-linux-gnu }}
-          DARWIN_AARCH64_SIGNATURE: ${{ needs.release-hanzo-desktop.outputs.signature-aarch64-apple-darwin }}
-          DARWIN_AARCH64_URL: ${{ needs.release-hanzo-desktop.outputs.update-url-aarch64-apple-darwin }}
-          WINDOWS_x86_64_SIGNATURE: ${{ needs.release-hanzo-desktop.outputs.signature-x86_64-pc-windows-msvc }}
-          WINDOWS_x86_64_URL: ${{ needs.release-hanzo-desktop.outputs.update-url-x86_64-pc-windows-msvc }}
+          LINUX_x86_64_SIGNATURE: ${{ needs.release-zoo-desktop.outputs.signature-x86_64-unknown-linux-gnu }}
+          LINUX_x86_64_URL: ${{ needs.release-zoo-desktop.outputs.update-url-x86_64-unknown-linux-gnu }}
+          DARWIN_AARCH64_SIGNATURE: ${{ needs.release-zoo-desktop.outputs.signature-aarch64-apple-darwin }}
+          DARWIN_AARCH64_URL: ${{ needs.release-zoo-desktop.outputs.update-url-aarch64-apple-darwin }}
+          WINDOWS_x86_64_SIGNATURE: ${{ needs.release-zoo-desktop.outputs.signature-x86_64-pc-windows-msvc }}
+          WINDOWS_x86_64_URL: ${{ needs.release-zoo-desktop.outputs.update-url-x86_64-pc-windows-msvc }}
         run: |
           mkdir files-to-r2
           npx ts-node ./ci-scripts/generate-updates-json.ts
@@ -333,14 +333,14 @@ jobs:
           aws_secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           aws_bucket: hanzo-download
           source_dir: files-to-r2
-          destination_dir: ./hanzo-desktop/binaries/development/
+          destination_dir: ./zoo-desktop/binaries/development/
 
   notify-slack:
     environment: development
     needs:
       - prebuild
-      - release-hanzo-desktop
-      - rollout-hanzo-desktop
+      - release-zoo-desktop
+      - rollout-zoo-desktop
     name: Notify Slack
     runs-on: ubuntu-22.04
     steps:
@@ -369,7 +369,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Download it from:\n* <${{ needs.release-hanzo-desktop.outputs.app-url-aarch64-apple-darwin }}|MacOS (Apple Silicon)>\n* <${{ needs.release-hanzo-desktop.outputs.app-url-x86_64-pc-windows-msvc }}|Windows (x86_64)>\n* <${{ needs.release-hanzo-desktop.outputs.app-url-x86_64-unknown-linux-gnu }}|Linux (x86_64)>"
+                    "text": "Download it from:\n* <${{ needs.release-zoo-desktop.outputs.app-url-aarch64-apple-darwin }}|MacOS (Apple Silicon)>\n* <${{ needs.release-zoo-desktop.outputs.app-url-x86_64-pc-windows-msvc }}|Windows (x86_64)>\n* <${{ needs.release-zoo-desktop.outputs.app-url-x86_64-unknown-linux-gnu }}|Linux (x86_64)>"
                   }
                 },
                 {

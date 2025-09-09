@@ -1,0 +1,30 @@
+{
+  "name": "@zooai/zoo-ui",
+  "version": "0.0.1",
+  "description": "Zoo AI UI Components Library - Modern React components for Zoo ecosystem",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zooai/zoo-desktop.git"
+  },
+  "keywords": ["zoo", "ai", "ui", "components", "react", "typescript"],
+  "author": "Zoo AI",
+  "license": "MIT",
+  "homepage": "https://github.com/zooai/zoo-desktop",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "zoo-desktop",
+  "private": true,
+  "version": "0.5.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "NODE_OPTIONS='--max-old-space-size=16384' tsc && NODE_OPTIONS='--max-old-space-size=16384' vite build",
+    "build:ci": "NODE_OPTIONS='--max-old-space-size=8192' tsc && NODE_OPTIONS='--max-old-space-size=8192' vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "test:startup": "cd src-tauri && cargo test startup",
+    "test:prerelease": "npm run test:startup"
+  }
+}

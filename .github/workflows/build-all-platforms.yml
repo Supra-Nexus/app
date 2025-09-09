@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'apps/hanzo-desktop/**'
+      - 'apps/zoo-desktop/**'
       - 'libs/**'
       - '.github/workflows/build-all-platforms.yml'
   push:
@@ -110,12 +110,12 @@ jobs:
       - name: Build frontend
         run: |
           NODE_OPTIONS="--max-old-space-size=8192" npm run build
-        working-directory: apps/hanzo-desktop
+        working-directory: apps/zoo-desktop
 
       - name: Build Tauri app (test only - no signing)
         run: |
           npx tauri build --target ${{ matrix.target }} --debug
-        working-directory: apps/hanzo-desktop
+        working-directory: apps/zoo-desktop
         env:
           TAURI_SIGNING_PRIVATE_KEY: ''
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
@@ -124,14 +124,14 @@ jobs:
         shell: bash
         run: |
           echo "✅ Build successful for ${{ matrix.name }}"
-          ls -la apps/hanzo-desktop/src-tauri/target/*/release/bundle/ || true
+          ls -la apps/zoo-desktop/src-tauri/target/*/release/bundle/ || true
           
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: hanzo-${{ matrix.target }}-test-build
           path: |
-            apps/hanzo-desktop/src-tauri/target/*/release/bundle/**/*
+            apps/zoo-desktop/src-tauri/target/*/release/bundle/**/*
           retention-days: 1
 
   # Mobile platform builds (separate job due to different requirements)
@@ -170,7 +170,7 @@ jobs:
           # Verify Xcode is installed
           xcode-select --print-path
           # Initialize iOS project if needed
-          cd apps/hanzo-desktop && npx tauri ios init || true
+          cd apps/zoo-desktop && npx tauri ios init || true
 
       - name: Setup Android environment
         if: matrix.platform == 'android'
@@ -192,11 +192,11 @@ jobs:
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
           
           # Initialize Android project if needed
-          cd apps/hanzo-desktop && npx tauri android init || true
+          cd apps/zoo-desktop && npx tauri android init || true
 
       - name: Build mobile app
         run: |
-          cd apps/hanzo-desktop
+          cd apps/zoo-desktop
           if [ "${{ matrix.platform }}" == "ios" ]; then
             echo "Building for iOS..."
             npx tauri ios build --ci --export-method debugging || echo "iOS build requires signing"

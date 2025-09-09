@@ -1,0 +1,36 @@
+@import '../../../libs/zoo-ui/src/styles/styles.css';
+@import 'primereact/resources/themes/lara-light-blue/theme.css';
+@import 'primereact/resources/primereact.min.css';
+
+/* Using Inter font from Google Fonts or local import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html,
+body,
+#root {
+  @apply font-inter bg-bg-dark text-text-default h-full rounded-lg border-0;
+}
+
+html {
+  @apply overscroll-none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.p-node-disabled {
+  pointer-events: none;
+  & .p-checkbox-box {
+    @apply !bg-gray-100;
+  }
+  & .p-icon.p-checkbox-icon {
+    @apply !pointer-events-none;
+  }
+}
+
+/* PrismSyntaxHighlighter table inside code block */
+[class*='language-'] .token.token.table {
+  @apply !inline;
+}
