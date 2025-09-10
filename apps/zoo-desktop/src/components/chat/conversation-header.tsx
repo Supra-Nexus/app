@@ -2,9 +2,9 @@ import { DotsVerticalIcon } from '@radix-ui/react-icons';
 import { useTranslation } from '@zooai/zoo-i18n';
 import { extractJobIdFromInbox } from '@zooai/zoo-message-ts/utils';
 import { useExportMessagesFromInbox } from '@zooai/zoo-node-state/v2/mutations/exportMessagesFromInbox/useExportMessagesFromInbox';
-import { useGetAgents } from '@zooai/zoo-node-state/v2/queries/getAgents/useGetAgents';
 import { useGetLLMProviders } from '@zooai/zoo-node-state/v2/queries/getLLMProviders/useGetLLMProviders';
 import { useGetProviderFromJob } from '@zooai/zoo-node-state/v2/queries/getProviderFromJob/useGetProviderFromJob';
+import { useAgentsWithFallback } from '../../hooks/use-agents-with-fallback';
 import {
   Accordion,
   AccordionContent,
@@ -77,10 +77,7 @@ const ConversationHeaderWithInboxId = () => {
     token: auth?.api_v2_key ?? '',
     jobId: inboxId ? extractJobIdFromInbox(inboxId) : '',
   });
-  const { data: agents } = useGetAgents({
-    nodeAddress: auth?.node_address ?? '',
-    token: auth?.api_v2_key ?? '',
-  });
+  const { data: agents } = useAgentsWithFallback();
 
   const isAgentInbox = provider?.provider_type === 'Agent';
 

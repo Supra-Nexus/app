@@ -312,7 +312,7 @@ export function MainNav() {
         )}
       >
         {sidebarExpanded && (
-          <span className="text-text-primary font-inter text-3xl font-black tracking-tight">
+          <span className="text-white font-inter text-3xl font-black tracking-tight">
             ZOO
           </span>
         )}

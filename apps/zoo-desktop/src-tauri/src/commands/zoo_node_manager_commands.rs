@@ -18,6 +18,21 @@ pub async fn zoo_node_is_running() -> Result<bool, String> {
 }
 
 #[tauri::command]
+pub async fn zoo_node_status() -> Result<serde_json::Value, String> {
+    let manager = ZOO_NODE_MANAGER_INSTANCE.get().unwrap().read().await;
+    
+    let is_running = manager.is_running().await;
+    let is_external = manager.is_external_node();
+    let is_managed = manager.is_managed_by_app();
+    
+    Ok(serde_json::json!({
+        "running": is_running,
+        "external": is_external,
+        "managed": is_managed
+    }))
+}
+
+#[tauri::command]
 pub async fn zoo_node_set_options(
     options: ZooNodeOptions,
 ) -> Result<ZooNodeOptions, String> {

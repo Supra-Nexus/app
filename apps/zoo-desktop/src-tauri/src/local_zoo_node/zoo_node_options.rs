@@ -117,25 +117,25 @@ impl ZooNodeOptions {
                 options
                     .initial_agent_names
                     .or(base_options.initial_agent_names)
-                    .unwrap_or_else(|| "Zoo_Eco_1".to_string()),
+                    .unwrap_or_else(|| "Zoo_Eco,Zoo_Coder,Zoo_Nano".to_string()),
             ),
             initial_agent_urls: Some(
                 options
                     .initial_agent_urls
                     .or(base_options.initial_agent_urls)
-                    .unwrap_or_else(|| "http://127.0.0.1:11435".to_string()),
+                    .unwrap_or_else(|| "http://127.0.0.1:11435,http://127.0.0.1:11435,http://127.0.0.1:11435".to_string()),
             ),
             initial_agent_models: Some(
                 options
                     .initial_agent_models
                     .or(base_options.initial_agent_models)
-                    .unwrap_or_else(|| "ollama:llama3.2".to_string()),
+                    .unwrap_or_else(|| "ollama:qwen3:4b-thinking-2507,ollama:hermes-4:70b,ollama:qwen3:0.6b".to_string()),
             ),
             initial_agent_api_keys: Some(
                 options
                     .initial_agent_api_keys
                     .or(base_options.initial_agent_api_keys)
-                    .unwrap_or_else(|| ",".to_string()),  // Single comma for two agents (empty API keys)
+                    .unwrap_or_else(|| ",,".to_string()),  // Two commas for three agents (empty API keys)
             ),
             starting_num_qr_devices: Some(
                 options
@@ -219,13 +219,13 @@ impl Default for ZooNodeOptions {
             embeddings_server_url: Some("http://127.0.0.1:11435".to_string()),
             first_device_needs_registration_code: Some("false".to_string()),
             initial_agent_urls: Some(
-                "http://127.0.0.1:11435,http://127.0.0.1:11435".to_string(),
+                "http://127.0.0.1:11435,http://127.0.0.1:11435,http://127.0.0.1:11435".to_string(),
             ),
-            initial_agent_names: Some("Zoo_Eco_1,Zoo_Coder_1".to_string()),
+            initial_agent_names: Some("Zoo_Eco,Zoo_Coder,Zoo_Nano".to_string()),
             initial_agent_models: Some(
-                "ollama:llama3.2,ollama:qwen2.5-coder".to_string(),
+                "ollama:qwen3:4b-thinking-2507,ollama:hermes-4:70b,ollama:qwen3:0.6b".to_string(),
             ),
-            initial_agent_api_keys: Some(",".to_string()),  // Single comma for two agents (empty API keys)
+            initial_agent_api_keys: Some(",,".to_string()),  // Two commas for three agents (empty API keys)
             starting_num_qr_devices: Some("0".to_string()),
             log_all: Some("1".to_string()),
             proxy_identity: Some("@@libp2p_relayer.sepolia-zoo".to_string()),

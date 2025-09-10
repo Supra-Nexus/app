@@ -124,9 +124,20 @@ const main = async () => {
         );
       }
     });
+  // Check for brand configuration or use default
+  const brandConfigPath = path.join(__dirname, '../apps/zoo-desktop/brand.config.json');
+  let desktopDir = 'zoo-desktop';
+  let nodeManagerDir = 'zoo-node-manager';
+  
+  if (fs.existsSync(brandConfigPath)) {
+    const brandConfig = JSON.parse(fs.readFileSync(brandConfigPath, 'utf8'));
+    desktopDir = brandConfig.brand?.paths?.desktop || desktopDir;
+    nodeManagerDir = brandConfig.brand?.paths?.nodeManager || nodeManagerDir;
+  }
+  
   const outputPath = path.join(
     __dirname,
-    '../apps/zoo-desktop/src/lib/zoo-node-manager/ollama-models-repository.json',
+    `../apps/${desktopDir}/src/lib/${nodeManagerDir}/ollama-models-repository.json`,
   );
   fs.writeFileSync(outputPath, JSON.stringify(models, null, 2), 'utf8');
   console.log(`Models data has been written to ${outputPath}`);

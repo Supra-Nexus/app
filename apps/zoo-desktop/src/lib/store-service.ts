@@ -1,30 +1,30 @@
 /**
- * Mock Store Service
- * This service provides mock data for the Zoo Store functionality.
- * Edit the data in store-mock-data.ts to customize the store contents.
+ * Store Service
+ * This service provides data for the Zoo Store functionality.
+ * Data is served from local JSON which can be updated from upstream API.
  */
 
 import {
-  MOCK_STORE_AGENTS,
-  MOCK_STORE_TOOLS,
-  MOCK_TOOL_DETAILS,
-  MOCK_STORE_CATEGORIES,
-  MOCK_FEATURED_COLLECTIONS,
-  MOCK_USER_PURCHASES,
+  STORE_AGENTS,
+  STORE_TOOLS,
+  TOOL_DETAILS,
+  STORE_CATEGORIES,
+  FEATURED_COLLECTIONS,
+  USER_PURCHASES,
   simulateApiDelay,
   searchStore
-} from './store-mock-data';
+} from './store-data';
 
-export class StoreMockService {
-  private static instance: StoreMockService;
+export class StoreService {
+  private static instance: StoreService;
 
   private constructor() {}
 
-  static getInstance(): StoreMockService {
-    if (!StoreMockService.instance) {
-      StoreMockService.instance = new StoreMockService();
+  static getInstance(): StoreService {
+    if (!StoreService.instance) {
+      StoreService.instance = new StoreService();
     }
-    return StoreMockService.instance;
+    return StoreService.instance;
   }
 
   /**
@@ -38,7 +38,7 @@ export class StoreMockService {
   }) {
     await simulateApiDelay();
 
-    let agents = [...MOCK_STORE_AGENTS];
+    let agents = [...STORE_AGENTS];
 
     // Filter by category if provided
     if (options?.category) {
@@ -79,7 +79,7 @@ export class StoreMockService {
   }) {
     await simulateApiDelay();
 
-    let tools = [...MOCK_STORE_TOOLS];
+    let tools = [...STORE_TOOLS];
 
     // Filter by category if provided
     if (options?.category) {
@@ -116,12 +116,12 @@ export class StoreMockService {
     await simulateApiDelay();
 
     // Check if we have detailed info
-    if (MOCK_TOOL_DETAILS[routerKey]) {
-      return MOCK_TOOL_DETAILS[routerKey];
+    if (TOOL_DETAILS[routerKey]) {
+      return TOOL_DETAILS[routerKey];
     }
 
     // Otherwise, find in tools or agents list
-    const tool = MOCK_STORE_TOOLS.find(t => t.routerKey === routerKey);
+    const tool = STORE_TOOLS.find(t => t.routerKey === routerKey);
     if (tool) {
       return {
         ...tool,
@@ -133,7 +133,7 @@ export class StoreMockService {
       };
     }
 
-    const agent = MOCK_STORE_AGENTS.find(a => a.routerKey === routerKey);
+    const agent = STORE_AGENTS.find(a => a.routerKey === routerKey);
     if (agent) {
       return {
         ...agent,
@@ -153,7 +153,7 @@ export class StoreMockService {
    */
   async getCategories() {
     await simulateApiDelay();
-    return MOCK_STORE_CATEGORIES;
+    return STORE_CATEGORIES;
   }
 
   /**
@@ -161,7 +161,7 @@ export class StoreMockService {
    */
   async getFeaturedCollections() {
     await simulateApiDelay();
-    return MOCK_FEATURED_COLLECTIONS;
+    return FEATURED_COLLECTIONS;
   }
 
   /**
@@ -169,7 +169,7 @@ export class StoreMockService {
    */
   async checkUserPurchase(itemId: string) {
     await simulateApiDelay();
-    return MOCK_USER_PURCHASES.includes(itemId);
+    return USER_PURCHASES.includes(itemId);
   }
 
   /**
@@ -179,8 +179,8 @@ export class StoreMockService {
     await simulateApiDelay(1500); // Simulate longer install time
 
     // Add to user purchases
-    if (!MOCK_USER_PURCHASES.includes(routerKey)) {
-      MOCK_USER_PURCHASES.push(routerKey);
+    if (!USER_PURCHASES.includes(routerKey)) {
+      USER_PURCHASES.push(routerKey);
     }
 
     return {
@@ -197,9 +197,9 @@ export class StoreMockService {
     await simulateApiDelay(1000);
 
     // Remove from user purchases
-    const index = MOCK_USER_PURCHASES.indexOf(routerKey);
+    const index = USER_PURCHASES.indexOf(routerKey);
     if (index > -1) {
-      MOCK_USER_PURCHASES.splice(index, 1);
+      USER_PURCHASES.splice(index, 1);
     }
 
     return {
@@ -223,9 +223,9 @@ export class StoreMockService {
     await simulateApiDelay();
 
     // Simple mock: return items not in user purchases
-    const allItems = [...MOCK_STORE_AGENTS, ...MOCK_STORE_TOOLS];
+    const allItems = [...STORE_AGENTS, ...STORE_TOOLS];
     const recommendations = allItems
-      .filter(item => !MOCK_USER_PURCHASES.includes(item.routerKey))
+      .filter(item => !USER_PURCHASES.includes(item.routerKey))
       .slice(0, 5);
 
     return recommendations;
@@ -264,12 +264,12 @@ export class StoreMockService {
 }
 
 // Export singleton instance
-export const storeMockService = StoreMockService.getInstance();
+export const storeService = StoreService.getInstance();
 
 // Export convenience functions
-export const getStoreAgents = (options?: any) => storeMockService.getAgents(options);
-export const getStoreTools = (options?: any) => storeMockService.getTools(options);
-export const getToolDetails = (routerKey: string) => storeMockService.getToolDetails(routerKey);
-export const installStoreItem = (routerKey: string) => storeMockService.installItem(routerKey);
-export const uninstallStoreItem = (routerKey: string) => storeMockService.uninstallItem(routerKey);
-export const searchStoreItems = (query: string, type?: any) => storeMockService.search(query, type);
+export const getStoreAgents = (options?: any) => storeService.getAgents(options);
+export const getStoreTools = (options?: any) => storeService.getTools(options);
+export const getToolDetails = (routerKey: string) => storeService.getToolDetails(routerKey);
+export const installStoreItem = (routerKey: string) => storeService.installItem(routerKey);
+export const uninstallStoreItem = (routerKey: string) => storeService.uninstallItem(routerKey);
+export const searchStoreItems = (query: string, type?: any) => storeService.search(query, type);

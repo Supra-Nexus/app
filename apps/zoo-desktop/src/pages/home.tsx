@@ -4,13 +4,13 @@ import { buildInboxIdFromJobId } from '@zooai/zoo-message-ts/utils/inbox_name_ha
 import {
   type ChatMessageFormSchema,
   chatMessageFormSchema,
-} from '@zooai/zoo-node-state/forms/chat/chat-message';
-import { DEFAULT_CHAT_CONFIG } from '@zooai/zoo-node-state/v2/constants';
-import { useCreateJob } from '@zooai/zoo-node-state/v2/mutations/createJob/useCreateJob';
-import { useGetAgents } from '@zooai/zoo-node-state/v2/queries/getAgents/useGetAgents';
-import { useGetLLMProviders } from '@zooai/zoo-node-state/v2/queries/getLLMProviders/useGetLLMProviders';
-import { useGetTools } from '@zooai/zoo-node-state/v2/queries/getToolsList/useGetToolsList';
-import { useGetSearchTools } from '@zooai/zoo-node-state/v2/queries/getToolsSearch/useGetToolsSearch';
+  DEFAULT_CHAT_CONFIG,
+  useCreateJob,
+  useGetAgents,
+  useGetLLMProviders,
+  useGetTools,
+  useGetSearchTools,
+} from '@zooai/zoo-node-state';
 import {
   Badge,
   Button,

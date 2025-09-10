@@ -1,6 +1,7 @@
 use std::fs;
 use std::path::PathBuf;
 
+use super::external_node_detector::{is_external_node_running, are_ports_available};
 use super::ollama_api::ollama_api_client::OllamaApiClient;
 use super::ollama_api::ollama_api_types::OllamaApiPullResponse;
 use super::process_handlers::ollama_process_handler::OllamaProcessHandler;
@@ -44,6 +45,9 @@ pub enum ZooNodeManagerEvent {
     StoppingOllama,
     OllamaStopped,
     OllamaStopError { error: String },
+    
+    ExternalNodeDetected { zoo_node: bool, ollama: bool },
+    PortsUnavailable { ports: Vec<u16> },
 }
 
 pub struct ZooNodeManager {
@@ -52,6 +56,8 @@ pub struct ZooNodeManager {
     event_broadcaster: broadcast::Sender<ZooNodeManagerEvent>,
     app_resource_dir: PathBuf,
     llm_models_path: PathBuf,
+    external_node_running: bool,
+    managed_by_app: bool,
 }
 
 impl ZooNodeManager {
@@ -78,6 +84,8 @@ impl ZooNodeManager {
             event_broadcaster,
             app_resource_dir,
             llm_models_path,
+            external_node_running: false,
+            managed_by_app: false,
         }
     }
 
@@ -91,6 +99,40 @@ impl ZooNodeManager {
     }
 
     pub async fn spawn(&mut self) -> Result<(), String> {
+        // Check if external nodes are already running
+        let (zoo_node_external, ollama_external) = is_external_node_running(2000, 11435).await;
+        
+        if zoo_node_external || ollama_external {
+            self.external_node_running = true;
+            self.emit_event(ZooNodeManagerEvent::ExternalNodeDetected {
+                zoo_node: zoo_node_external,
+                ollama: ollama_external,
+            });
+            
+            // If external nodes are running, don't spawn our own
+            if zoo_node_external && ollama_external {
+                log::info!("External Zoo node and Ollama detected, using external services");
+                return Ok(());
+            }
+        }
+        
+        // Check if required ports are available
+        let ports_to_check = vec![2000, 2001, 2002, 11435];
+        let port_availability = are_ports_available(&ports_to_check).await;
+        let unavailable_ports: Vec<u16> = port_availability
+            .iter()
+            .filter(|(_, available)| !available)
+            .map(|(port, _)| *port)
+            .collect();
+        
+        if !unavailable_ports.is_empty() && !self.external_node_running {
+            self.emit_event(ZooNodeManagerEvent::PortsUnavailable {
+                ports: unavailable_ports.clone(),
+            });
+            return Err(format!("Ports unavailable: {:?}", unavailable_ports));
+        }
+        
+        self.managed_by_app = true;
         self.emit_event(ZooNodeManagerEvent::StartingOllama);
         match self.ollama_process.spawn(None).await {
             Ok(_) => {
@@ -171,6 +213,11 @@ impl ZooNodeManager {
     }
 
     pub async fn kill(&mut self) {
+        // Only kill processes if they are managed by the app
+        if !self.managed_by_app {
+            log::info!("Skipping kill - nodes are not managed by this app");
+            return;
+        }
         self.emit_event(ZooNodeManagerEvent::StoppingZooNode);
         self.zoo_node_process.kill().await;
         self.emit_event(ZooNodeManagerEvent::ZooNodeStopped);
@@ -230,5 +277,19 @@ impl ZooNodeManager {
 
     pub async fn get_ollama_version(app: AppHandle) -> Result<String> {
         OllamaProcessHandler::version(app).await
+    }
+    
+    pub async fn check_external_nodes(&mut self) -> (bool, bool) {
+        let (zoo_node_external, ollama_external) = is_external_node_running(2000, 11435).await;
+        self.external_node_running = zoo_node_external || ollama_external;
+        (zoo_node_external, ollama_external)
+    }
+    
+    pub fn is_managed_by_app(&self) -> bool {
+        self.managed_by_app
+    }
+    
+    pub fn is_external_node(&self) -> bool {
+        self.external_node_running
     }
 }

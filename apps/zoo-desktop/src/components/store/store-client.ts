@@ -1,6 +1,6 @@
 import { type QueryObserverOptions, useQuery } from '@tanstack/react-query';
 import { invoke } from '@tauri-apps/api/core';
-import storeMockResponses from '../../lib/store-mock-responses.json';
+import storeResponses from '../../lib/store-responses.json';
 
 export const storeKeys = {
   all: ['store'] as const,
@@ -98,7 +98,7 @@ const getStoreAgents = async (): Promise<FormattedStoreAgent[]> => {
   } catch (mockError) {
     console.error('Mock data also failed, using hardcoded fallback', mockError);
     // Final fallback - use the imported JSON directly
-    return storeMockResponses.agents.products.map((item) => ({
+    return storeResponses.agents.products.map((item) => ({
       id: item.id,
       name: item.name,
       description: item.description,

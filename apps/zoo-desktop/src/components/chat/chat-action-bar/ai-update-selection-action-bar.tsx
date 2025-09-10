@@ -2,10 +2,10 @@ import { useTranslation } from '@zooai/zoo-i18n';
 import { extractJobIdFromInbox } from '@zooai/zoo-message-ts/utils/inbox_name_handler';
 import { useUpdateAgentInJob } from '@zooai/zoo-node-state/v2/mutations/updateAgentInJob/useUpdateAgentInJob';
 import { useUpdateChatConfig } from '@zooai/zoo-node-state/v2/mutations/updateChatConfig/useUpdateChatConfig';
-import { useGetAgents } from '@zooai/zoo-node-state/v2/queries/getAgents/useGetAgents';
 import { useGetChatConfig } from '@zooai/zoo-node-state/v2/queries/getChatConfig/useGetChatConfig';
 import { useGetLLMProviders } from '@zooai/zoo-node-state/v2/queries/getLLMProviders/useGetLLMProviders';
 import { useGetProviderFromJob } from '@zooai/zoo-node-state/v2/queries/getProviderFromJob/useGetProviderFromJob';
+import { useAgentsWithFallback } from '../../../hooks/use-agents-with-fallback';
 import {
   Badge,
   buttonVariants,
@@ -126,10 +126,7 @@ export function AIModelSelectorBase({
     },
   );
 
-  const { data: agents, isSuccess: isAgentsSuccess } = useGetAgents({
-    nodeAddress: auth?.node_address ?? '',
-    token: auth?.api_v2_key ?? '',
-  });
+  const { data: agents, isSuccess: isAgentsSuccess } = useAgentsWithFallback();
   const isRegularChatPage =
     location.pathname.includes('inboxes') || location.pathname.includes('home');
 

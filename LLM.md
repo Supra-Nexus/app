@@ -1,12 +1,12 @@
-# Hanzo Application - LLM Context
+# Zoo Application - LLM Context
 
 ## Project Overview
-Hanzo Desktop is a privacy-focused AI assistant application built with Tauri 2.x, React, and TypeScript. It provides local AI capabilities through a desktop interface with support for multiple platforms including macOS, Windows, Linux, iOS, and Android.
+Zoo Desktop is a privacy-focused AI assistant application built with Tauri 2.x, React, and TypeScript. It provides local AI capabilities through a desktop interface with support for multiple platforms including macOS, Windows, Linux, iOS, and Android.
 
 ## Company Information
-- **Company**: Hanzo Industries Inc
-- **Domain**: hanzo.ai
-- **Product**: Hanzo Desktop - Private Local AI Assistant
+- **Company**: Zoo AI Inc
+- **Domain**: zoo.ai
+- **Product**: Zoo Desktop - Private Local AI Assistant
 
 ## Architecture
 
@@ -14,13 +14,13 @@ Hanzo Desktop is a privacy-focused AI assistant application built with Tauri 2.x
 - **Desktop Framework**: Tauri 2.x (Rust backend, React frontend)
 - **Frontend**: React 18+ with TypeScript
 - **Build System**: NX Monorepo
-- **Styling**: Tailwind CSS with custom Hanzo UI components
+- **Styling**: Tailwind CSS with custom Zoo UI components
 - **State Management**: Zustand
-- **Backend Services**: Rust-based Hanzo Node
+- **Backend Services**: Rust-based Zoo Node
 
 ### Key Directories
 ```
-/apps/hanzo-desktop/
+/apps/zoo-desktop/
 ├── src/                   # React application source
 │   ├── components/       # UI components
 │   ├── pages/           # Route pages
@@ -33,13 +33,13 @@ Hanzo Desktop is a privacy-focused AI assistant application built with Tauri 2.x
 └── external-binaries/   # Platform-specific binaries
 
 /libs/
-├── hanzo-ui/           # Shared UI component library
-├── hanzo-i18n/         # Internationalization
-├── hanzo-node-state/   # State management utilities
-└── hanzo-message-ts/   # TypeScript message definitions
+├── zoo-ui/           # Shared UI component library
+├── zoo-i18n/         # Internationalization
+├── zoo-node-state/   # State management utilities
+└── zoo-message-ts/   # TypeScript message definitions
 ```
 
-## Recent Changes (Hanzo Rebranding)
+## Recent Changes (Zoo Rebranding)
 
 ### Completed
 1. **Visual Rebranding**:
@@ -54,10 +54,10 @@ Hanzo Desktop is a privacy-focused AI assistant application built with Tauri 2.x
    - Applied gradient overlays for native look
 
 3. **Naming Updates**:
-   - Renamed from "Shinkai" to "Hanzo" throughout codebase
-   - Updated package names to @hanzo_network
-   - Changed product name to "Hanzo Desktop"
-   - Updated company references to "Hanzo Industries Inc"
+   - Renamed from "Hanzo" to "Zoo" throughout codebase
+   - Updated package names to @zoo_network
+   - Changed product name to "Zoo Desktop"
+   - Updated company references to "Zoo AI Inc"
 
 4. **Mobile Support**:
    - Initialized iOS support with Tauri 2.x
@@ -70,8 +70,7 @@ Hanzo Desktop is a privacy-focused AI assistant application built with Tauri 2.x
    - Fixed all button and checkbox contrast issues
 
 ### Pending Items
-- Binary files still named "shinkai-node" (external dependencies)
-- Full integration testing with hanzo/node backend
+- Full integration testing with zoo/node backend
 - Android SDK configuration for mobile builds
 - Production deployment configuration
 
@@ -100,7 +99,7 @@ npm run test:e2e
 npm run dev
 
 # Production build
-npx nx build hanzo-desktop --configuration=production
+npx nx build zoo-desktop --configuration=production
 
 # Package for distribution
 npx tauri build
@@ -169,7 +168,7 @@ TAURI_SIGNING_PRIVATE_KEY_PASSWORD          # Signing key password
 
 ## Integration Points
 
-### Hanzo Node Backend
+### Zoo Node Backend
 - Local node runs on `http://127.0.0.1:9550`
 - WebSocket connections for real-time updates
 - REST API for data operations
@@ -214,5 +213,5 @@ TAURI_SIGNING_PRIVATE_KEY_PASSWORD          # Signing key password
 
 ---
 
-*Last Updated: December 2024*
-*Version: 1.1.13*
+*Last Updated: January 2025*
+*Version: 1.1.16*

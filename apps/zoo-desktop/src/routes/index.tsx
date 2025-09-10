@@ -34,6 +34,7 @@ import { VectorFsProvider } from '../components/vector-fs/context/vector-fs-cont
 import VectorFs from '../components/vector-fs/vector-fs';
 import SearchNodeFiles from '../components/vector-search/search-node-files';
 import { useConfigDeepLink } from '../hooks/config-deeplink';
+import { useModelDetection } from '../hooks/use-model-detection';
 import {
   useZooNodeGetDefaultModel,
   useZooNodeIsRunningQuery,
@@ -45,10 +46,13 @@ import { ZooNodeRunningOverlay } from '../lib/zoo-node-overlay';
 import AddAIPage from '../pages/add-ai';
 import AgentsPage from '../pages/agents';
 import AIModelInstallation from '../pages/ai-model-installation';
+import AIStorePage from '../pages/ai-store';
 import AIsPage from '../pages/ais';
 import AnalyticsPage from '../pages/analytics';
 import AnalyticsSettingsPage from '../pages/analytics-settings';
 import AppearancePage from '../pages/appearance';
+import BackgroundServicePage from '../pages/background-service';
+import ModelDownloadPage from '../pages/model-download';
 import ChatConversation from '../pages/chat/chat-conversation';
 import ChatLayout from '../pages/chat/layout';
 import CreateTaskPage from '../pages/create-task';
@@ -279,6 +283,7 @@ const AppRoutes = () => {
   useDefaultAgentByDefault();
   useConfigDeepLink();
   useNavigateToPathFromSpotlight();
+  useModelDetection();
 
   const defaultAgentId = useSettings((state) => state.defaultAgentId);
 
@@ -302,6 +307,7 @@ const AppRoutes = () => {
               path={'terms-conditions'}
             />
             <Route element={<AnalyticsPage />} path={'analytics'} />
+            <Route element={<ModelDownloadPage />} path={'model-download'} />
             <Route
               element={<QuickConnectionPage />}
               path={'quick-connection'}
@@ -377,6 +383,7 @@ const AppRoutes = () => {
             }
           >
             <Route element={<AIModelInstallation />} path="install-ai-models" />
+            <Route element={<AIStorePage />} path="ai-store" />
             <Route element={<AIsPage />} path="ais" />
             <Route element={<AgentsPage />} path="agents" />
             <Route element={<AddAIPage />} path="add-ai" />
@@ -479,6 +486,7 @@ const AppRoutes = () => {
               path={'analytics-settings'}
             />
             <Route element={<AppearancePage />} path={'appearance'} />
+            <Route element={<BackgroundServicePage />} path={'background-service'} />
             <Route element={<PromptLibrary />} path={'prompt-library'} />
             <Route element={<GalxeValidation />} path={'galxe-validation'} />
             <Route

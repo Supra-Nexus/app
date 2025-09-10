@@ -88,7 +88,7 @@ export const ResetConnectionDialog = ({
   const handleReset = async () => {
     await zooNodeKill();
     useAuth.getState().setLogout(); // clean up local storage
-    await zooNodeRemoveStorage({ preserveKeys: true });
+    await zooNodeRemoveStorage({ preserveKeys: false });
     setZooNodeOptions(null);
     await zooNodeSpawn();
   };

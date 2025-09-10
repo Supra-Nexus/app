@@ -13,5 +13,8 @@
     "tauri:dev": "tauri dev",
     "test:startup": "cd src-tauri && cargo test startup",
     "test:prerelease": "npm run test:startup"
+  },
+  "dependencies": {
+    "@tauri-apps/plugin-autostart": "^2.5.0"
   }
 }

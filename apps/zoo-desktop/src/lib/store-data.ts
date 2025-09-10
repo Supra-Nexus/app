@@ -1,7 +1,7 @@
-// Mock data for the Zoo Store - easily editable static JSON
-// Replace with actual backend API calls when ready
+// Store data for the Zoo Store - served from local JSON
+// Can be updated from upstream API when available
 
-export const MOCK_STORE_AGENTS = [
+export const STORE_AGENTS = [
   {
     id: "zoo-eco-agent",
     name: "Zoo Eco Assistant",
@@ -154,7 +154,7 @@ export const MOCK_STORE_AGENTS = [
   }
 ];
 
-export const MOCK_STORE_TOOLS = [
+export const STORE_TOOLS = [
   {
     id: "zoo-python-runner",
     name: "Python Code Runner",
@@ -233,7 +233,7 @@ export const MOCK_STORE_TOOLS = [
 ];
 
 // Mock tool details (when fetching a specific tool)
-export const MOCK_TOOL_DETAILS: Record<string, any> = {
+export const TOOL_DETAILS: Record<string, any> = {
   "zoo-python-runner": {
     id: "zoo-python-runner",
     name: "Python Code Runner",
@@ -284,7 +284,7 @@ All code runs in isolated Docker containers with limited resources and no networ
 };
 
 // Mock store categories
-export const MOCK_STORE_CATEGORIES = [
+export const STORE_CATEGORIES = [
   {
     id: "development",
     name: "Development",
@@ -344,7 +344,7 @@ export const MOCK_STORE_CATEGORIES = [
 ];
 
 // Mock featured collections
-export const MOCK_FEATURED_COLLECTIONS = [
+export const FEATURED_COLLECTIONS = [
   {
     id: "trending-2024",
     name: "Trending in 2024",
@@ -369,7 +369,7 @@ export const MOCK_FEATURED_COLLECTIONS = [
 ];
 
 // Mock user's purchased/installed items
-export const MOCK_USER_PURCHASES = [
+export const USER_PURCHASES = [
   "zoo-eco-agent",
   "zoo-python-runner",
   "zoo-web-scraper"
@@ -384,8 +384,8 @@ export const searchStore = async (query: string, type?: 'agent' | 'tool' | 'all'
   await simulateApiDelay();
   
   const allItems = [
-    ...MOCK_STORE_AGENTS.map(a => ({ ...a, type: 'agent' })),
-    ...MOCK_STORE_TOOLS.map(t => ({ ...t, type: 'tool' }))
+    ...STORE_AGENTS.map(a => ({ ...a, type: 'agent' })),
+    ...STORE_TOOLS.map(t => ({ ...t, type: 'tool' }))
   ];
   
   const filtered = allItems.filter(item => {

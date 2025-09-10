@@ -818,9 +818,25 @@ const RegularRestoreWalletMnemonic = () => {
       resetWalletCreation();
     },
     onError: (error) => {
-      toast.error('Error restoring wallet', {
-        description: error?.response?.data?.message ?? error.message,
-      });
+      const errorMessage = error?.response?.data?.message ?? error.message;
+      
+      if (errorMessage?.toLowerCase().includes('invalid bearer token') || 
+          errorMessage?.toLowerCase().includes('unauthorized')) {
+        toast.error('Authentication Error', {
+          description: 'Your session has expired or node needs to be reset.',
+          action: {
+            label: 'Reset Node',
+            onClick: () => {
+              window.location.href = '/onboarding';
+            }
+          },
+          duration: 10000,
+        });
+      } else {
+        toast.error('Error restoring wallet', {
+          description: errorMessage,
+        });
+      }
     },
   });
 
@@ -930,9 +946,25 @@ const RegularRestoreWalletPrivateKey = () => {
       resetWalletCreation();
     },
     onError: (error) => {
-      toast.error('Error restoring wallet', {
-        description: error?.response?.data?.message ?? error.message,
-      });
+      const errorMessage = error?.response?.data?.message ?? error.message;
+      
+      if (errorMessage?.toLowerCase().includes('invalid bearer token') || 
+          errorMessage?.toLowerCase().includes('unauthorized')) {
+        toast.error('Authentication Error', {
+          description: 'Your session has expired or node needs to be reset.',
+          action: {
+            label: 'Reset Node',
+            onClick: () => {
+              window.location.href = '/onboarding';
+            }
+          },
+          duration: 10000,
+        });
+      } else {
+        toast.error('Error restoring wallet', {
+          description: errorMessage,
+        });
+      }
     },
   });
 
@@ -1085,9 +1117,27 @@ const RegularCreateWallet = () => {
       setWalletCreationView(WalletCreateConnectView.ViewSecretRecoveryPhrase);
     },
     onError: (error) => {
-      toast.error('Error creating wallet', {
-        description: error?.response?.data?.message ?? error.message,
-      });
+      const errorMessage = error?.response?.data?.message ?? error.message;
+      
+      // Check if it's an authentication error
+      if (errorMessage?.toLowerCase().includes('invalid bearer token') || 
+          errorMessage?.toLowerCase().includes('unauthorized')) {
+        toast.error('Authentication Error', {
+          description: 'Your session has expired or node needs to be reset.',
+          action: {
+            label: 'Reset Node',
+            onClick: () => {
+              // Trigger the reset node dialog
+              window.location.href = '/onboarding';
+            }
+          },
+          duration: 10000, // Show for 10 seconds
+        });
+      } else {
+        toast.error('Error creating wallet', {
+          description: errorMessage,
+        });
+      }
     },
   });
 

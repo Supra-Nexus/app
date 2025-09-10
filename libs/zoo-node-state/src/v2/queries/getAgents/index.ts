@@ -10,3 +10,6 @@ export const getAgents = async ({
   const result = await getAgentsApi(nodeAddress, token, categoryFilter);
   return result;
 };
+
+export { useGetAgents } from './useGetAgents';
+export type { GetAgentsInput, GetAgentsOutput } from './types';

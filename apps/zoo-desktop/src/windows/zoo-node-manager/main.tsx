@@ -174,7 +174,7 @@ const App = () => {
 
   const handleReset = (): void => {
     setIsConfirmResetDialogOpened(false);
-    void zooNodeRemoveStorage({ preserveKeys: true });
+    void zooNodeRemoveStorage({ preserveKeys: false });
   };
 
   const startSyncOllamaModels = async () => {

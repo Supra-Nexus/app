@@ -9,7 +9,7 @@ use crate::commands::hardware::hardware_get_summary;
 use crate::commands::zoo_node_manager_commands::{
     zoo_node_get_default_model, zoo_node_get_ollama_api_url,
     zoo_node_get_ollama_version, zoo_node_get_options, zoo_node_is_running,
-    zoo_node_kill, zoo_node_remove_storage, zoo_node_set_default_options,
+    zoo_node_status, zoo_node_kill, zoo_node_remove_storage, zoo_node_set_default_options,
     zoo_node_set_options, zoo_node_spawn, show_zoo_node_manager_window,
     zoo_node_open_storage_location, zoo_node_open_storage_location_with_path,
     zoo_node_open_chat_folder,
@@ -29,7 +29,7 @@ use crate::commands::mcp_clients_install::{
 use crate::commands::logs::{download_logs, retrieve_logs};
 use crate::commands::spotlight_commands::{hide_spotlight_window_app, show_spotlight_window_app, open_main_window_with_path_app};
 use crate::commands::debug_commands::{write_debug_log, save_debug_logs, get_debug_logs_path, open_debug_logs_folder};
-use crate::commands::store_mock::{get_store_mock_response, store_api_proxy};
+use crate::commands::store::{get_store_response, store_api_proxy};
 use deep_links::setup_deep_links;
 use global_shortcuts::global_shortcut_handler;
 use globals::ZOO_NODE_MANAGER_INSTANCE;
@@ -58,6 +58,11 @@ struct Payload {
 
 fn main() {
     let _ = fix_path_env::fix();
+    
+    // Check if app is started with --background flag
+    let args: Vec<String> = std::env::args().collect();
+    let is_background_mode = args.contains(&"--background".to_string());
+    
     tauri::Builder::default()
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
             app.emit("single-instance", Payload { args: argv, cwd })
@@ -105,12 +110,17 @@ fn main() {
         .plugin(tauri_plugin_deep_link::init())
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_notification::init())
+        .plugin(tauri_plugin_autostart::init(
+            tauri_plugin_autostart::MacosLauncher::LaunchAgent,
+            Some(vec!["--background"]),
+        ))
         .invoke_handler(tauri::generate_handler![
             hide_spotlight_window_app,
             show_spotlight_window_app,
             open_main_window_with_path_app,
             show_zoo_node_manager_window,
             zoo_node_is_running,
+            zoo_node_status,
             zoo_node_get_options,
             zoo_node_set_options,
             zoo_node_spawn,
@@ -143,11 +153,11 @@ fn main() {
             save_debug_logs,
             get_debug_logs_path,
             open_debug_logs_folder,
-            get_store_mock_response,
-            store_api_proxy,
+            commands::store::get_store_response,
+            commands::store::store_api_proxy,
         ])
-        .setup(|app| {
-            log::info!("starting app version: {}", env!("CARGO_PKG_VERSION"));
+        .setup(move |app| {
+            log::info!("starting app version: {} (background: {})", env!("CARGO_PKG_VERSION"), is_background_mode);
             let app_resource_dir = app.path().resource_dir()?;
             let app_data_dir = app.path().app_data_dir()?;
 
@@ -167,15 +177,29 @@ fn main() {
             tauri::async_runtime::spawn({
                 let app_handle = app.handle().clone();
                 async move {
-                    // Kill any existing process related to zoo and/or using zoo ports
+                    // Check for external nodes before killing
                     let mut zoo_node_manager_guard =
                         ZOO_NODE_MANAGER_INSTANCE.get().unwrap().write().await;
-                    zoo_node_manager_guard.kill().await;
+                    
+                    // Check if external nodes are running
+                    let (zoo_external, ollama_external) = zoo_node_manager_guard.check_external_nodes().await;
+                    
+                    if !zoo_external && !ollama_external {
+                        // Only kill if no external nodes are detected
+                        zoo_node_manager_guard.kill().await;
+                    } else {
+                        log::info!("External nodes detected (zoo: {}, ollama: {}), skipping kill", zoo_external, ollama_external);
+                    }
                     drop(zoo_node_manager_guard);
 
-                    let _ = recreate_window(app_handle.clone(), Window::Coordinator, false);
-                    let _ = recreate_window(app_handle.clone(), Window::Spotlight, false);
-                    let _ = recreate_window(app_handle.clone(), Window::Main, true);
+                    // Only create windows if not in background mode
+                    if !is_background_mode {
+                        let _ = recreate_window(app_handle.clone(), Window::Coordinator, false);
+                        let _ = recreate_window(app_handle.clone(), Window::Spotlight, false);
+                        let _ = recreate_window(app_handle.clone(), Window::Main, true);
+                    } else {
+                        log::info!("Running in background mode, skipping window creation");
+                    }
                 }
             });
 
