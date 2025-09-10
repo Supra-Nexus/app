@@ -1,4 +1,4 @@
-name: Release Mobile Apps
+name: Release Zoo Mobile
 
 on:
   push:
