@@ -16,7 +16,7 @@ enum Arch {
 const envSchema = z.object({
   ARCH: z.nativeEnum(Arch),
   OLLAMA_VERSION: z.string().min(6),
-  HANZO_NODE_VERSION: z.string().min(6),
+  ZOO_NODE_VERSION: z.string().min(6),
 });
 
 type Env = z.infer<typeof envSchema>;
@@ -25,10 +25,10 @@ const env: Env = envSchema.parse(process.env);
 
 const TEMP_PATH = './temp';
 const OLLAMA_RESOURCES_PATH =
-  './apps/hanzo-desktop/src-tauri/external-binaries/ollama/';
-const HANZO_NODE_RESOURCES_PATH =
-  './apps/hanzo-desktop/src-tauri/external-binaries/hanzo-node/';
-const LLM_MODELS_PATH = './apps/hanzo-desktop/src-tauri/llm-models/';
+  './apps/zoo-desktop/src-tauri/external-binaries/ollama/';
+const ZOO_NODE_RESOURCES_PATH =
+  './apps/zoo-desktop/src-tauri/external-binaries/zoo-node/';
+const LLM_MODELS_PATH = './apps/zoo-desktop/src-tauri/llm-models/';
 
 const asBinaryName = (arch: Arch, path: string) => {
   return `${path}${arch === Arch.x86_64_pc_windows_msvc ? '.exe' : ''}`;
@@ -76,12 +76,12 @@ const downloadFile = async (url: string, path: string): Promise<void> => {
   console.log(`Download complete: ${url}`);
 };
 
-const downloadHanzoNodeBinary = async (arch: Arch, version: string) => {
-  console.log(`Downloading hanzo-node arch:${arch} version:${version}`);
-  const downloadUrl = `https://download.hanzo.com/hanzo-node/binaries/production/${arch}/${version}.zip`;
-  const zippedPath = path.join(TEMP_PATH, `hanzo-node-${version}.zip`);
+const downloadZooNodeBinary = async (arch: Arch, version: string) => {
+  console.log(`Downloading zoo-node arch:${arch} version:${version}`);
+  const downloadUrl = `https://download.hanzo.com/zoo-node/binaries/production/${arch}/${version}.zip`;
+  const zippedPath = path.join(TEMP_PATH, `zoo-node-${version}.zip`);
   await downloadFile(downloadUrl, zippedPath);
-  let unzippedPath = path.join(TEMP_PATH, `hanzo-node-${version}`);
+  let unzippedPath = path.join(TEMP_PATH, `zoo-node-${version}`);
   await zl.extract(zippedPath, unzippedPath, {
     overwrite: true,
   });
@@ -90,7 +90,7 @@ const downloadHanzoNodeBinary = async (arch: Arch, version: string) => {
   for (const file of files) {
     await cp(
       path.join(unzippedPath, file),
-      path.join(HANZO_NODE_RESOURCES_PATH, file),
+      path.join(ZOO_NODE_RESOURCES_PATH, file),
       {
         recursive: true,
       },
@@ -98,36 +98,36 @@ const downloadHanzoNodeBinary = async (arch: Arch, version: string) => {
   }
 
   // They are used as sidecars in Tauri
-  const hanzoNodeBinaryPath = asBinaryName(
+  const zooNodeBinaryPath = asBinaryName(
     arch,
-    `./apps/hanzo-desktop/src-tauri/external-binaries/hanzo-node/hanzo-node`,
+    `./apps/zoo-desktop/src-tauri/external-binaries/zoo-node/zoo-node`,
   );
-  const hanzoToolsRunnerDenoBinaryPath = asBinaryName(
+  const zooToolsRunnerDenoBinaryPath = asBinaryName(
     arch,
-    `./apps/hanzo-desktop/src-tauri/external-binaries/hanzo-node/hanzo-tools-runner-resources/deno`,
+    `./apps/zoo-desktop/src-tauri/external-binaries/zoo-node/zoo-tools-runner-resources/deno`,
   );
-  const hanzoToolsRunnerUvBinaryPath = asBinaryName(
+  const zooToolsRunnerUvBinaryPath = asBinaryName(
     arch,
-    `./apps/hanzo-desktop/src-tauri/external-binaries/hanzo-node/hanzo-tools-runner-resources/uv`,
+    `./apps/zoo-desktop/src-tauri/external-binaries/zoo-node/zoo-tools-runner-resources/uv`,
   );
   await rename(
-    hanzoNodeBinaryPath,
-    asSidecarName(arch, hanzoNodeBinaryPath),
+    zooNodeBinaryPath,
+    asSidecarName(arch, zooNodeBinaryPath),
   );
   await rename(
-    hanzoToolsRunnerDenoBinaryPath,
-    asSidecarName(arch, hanzoToolsRunnerDenoBinaryPath),
+    zooToolsRunnerDenoBinaryPath,
+    asSidecarName(arch, zooToolsRunnerDenoBinaryPath),
   );
   await rename(
-    hanzoToolsRunnerUvBinaryPath,
-    asSidecarName(arch, hanzoToolsRunnerUvBinaryPath),
+    zooToolsRunnerUvBinaryPath,
+    asSidecarName(arch, zooToolsRunnerUvBinaryPath),
   );
 
-  await addExecPermissions(asSidecarName(arch, hanzoNodeBinaryPath));
+  await addExecPermissions(asSidecarName(arch, zooNodeBinaryPath));
   await addExecPermissions(
-    asSidecarName(arch, hanzoToolsRunnerDenoBinaryPath),
+    asSidecarName(arch, zooToolsRunnerDenoBinaryPath),
   );
-  await addExecPermissions(asSidecarName(arch, hanzoToolsRunnerUvBinaryPath));
+  await addExecPermissions(asSidecarName(arch, zooToolsRunnerUvBinaryPath));
 };
 
 const downloadOllamaAarch64AppleDarwin = async (version: string) => {
@@ -144,7 +144,7 @@ const downloadOllamaAarch64AppleDarwin = async (version: string) => {
   await zl.extract(zippedPath, unzippedPath);
   const ollamaBinaryPath = asSidecarName(
     Arch.aarch64_apple_darwin,
-    `./apps/hanzo-desktop/src-tauri/external-binaries/ollama/ollama`,
+    `./apps/zoo-desktop/src-tauri/external-binaries/ollama/ollama`,
   );
   await ensureFile(ollamaBinaryPath);
   await copyFile(
@@ -170,7 +170,7 @@ const downloadOllamax8664UnknownLinuxGnu = async (version: string) => {
   });
   const ollamaBinaryPath = asSidecarName(
     Arch.x86_64_unknown_linux_gnu,
-    `./apps/hanzo-desktop/src-tauri/external-binaries/ollama/ollama`,
+    `./apps/zoo-desktop/src-tauri/external-binaries/ollama/ollama`,
   );
   await ensureFile(ollamaBinaryPath);
   await copyFile(path.join(unzippedPath, 'bin/ollama'), ollamaBinaryPath);
@@ -227,7 +227,7 @@ const downloadOllamax8664PcWindowsMsvcNvidia = async (version: string) => {
 
   const ollamaBinaryPath = asBinaryName(
     Arch.x86_64_pc_windows_msvc,
-    `./apps/hanzo-desktop/src-tauri/external-binaries/ollama/ollama`,
+    `./apps/zoo-desktop/src-tauri/external-binaries/ollama/ollama`,
   );
   await rename(
     ollamaBinaryPath,
@@ -254,7 +254,7 @@ const downloadEmbeddingModel = async () => {
 };
 
 export const main = async () => {
-  await downloadHanzoNodeBinary(env.ARCH, env.HANZO_NODE_VERSION);
+  await downloadZooNodeBinary(env.ARCH, env.ZOO_NODE_VERSION);
   await downloadOllama[env.ARCH](env.OLLAMA_VERSION);
   await downloadEmbeddingModel();
 };

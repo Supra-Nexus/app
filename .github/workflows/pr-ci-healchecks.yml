@@ -41,7 +41,7 @@ jobs:
         env:
           ARCH: x86_64-unknown-linux-gnu
           OLLAMA_VERSION: v0.11.8
-          HANZO_NODE_VERSION: v1.1.8
+          ZOO_NODE_VERSION: v1.1.8
         run: |
           npx ts-node ./ci-scripts/download-side-binaries.ts
 
