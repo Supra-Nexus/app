@@ -1,11 +1,24 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": [
     "apps/**/*.ts",
     "apps/**/*.tsx",
+    "apps/**/*.js",
+    "apps/**/*.jsx",
     "libs/**/*.ts",
     "libs/**/*.tsx"
   ],
@@ -14,6 +27,7 @@
     "dist",
     "build",
     "**/*.spec.ts",
-    "**/*.test.ts"
+    "**/*.test.ts",
+    "apps/zoo-desktop/src-tauri"
   ]
 }
