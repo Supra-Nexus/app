@@ -7,6 +7,7 @@ import {
 } from '@zooai/zoo-ui';
 import { cn } from '@zooai/zoo-ui/utils';
 import React from 'react';
+import { zooLogoDataUrl } from '@zooai/logo';
 
 interface VideoBannerProps {
   onClose?: () => void;
@@ -40,7 +41,7 @@ export function VideoBanner({ title, videoUrl, duration }: VideoBannerProps) {
             <img
               alt="Zoo Logo"
               className="w-full h-full object-contain"
-              src={'./zoo-logo.png'}
+              src={zooLogoDataUrl}
             />
           </div>
         </div>

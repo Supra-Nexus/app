@@ -53,6 +53,8 @@ import AnalyticsSettingsPage from '../pages/analytics-settings';
 import AppearancePage from '../pages/appearance';
 import BackgroundServicePage from '../pages/background-service';
 import ModelDownloadPage from '../pages/model-download';
+import ModelDownloadTestPage from '../pages/model-download-test';
+import OnboardingChecklistPage from '../pages/onboarding-checklist';
 import ChatConversation from '../pages/chat/chat-conversation';
 import ChatLayout from '../pages/chat/layout';
 import CreateTaskPage from '../pages/create-task';
@@ -307,6 +309,7 @@ const AppRoutes = () => {
               path={'terms-conditions'}
             />
             <Route element={<AnalyticsPage />} path={'analytics'} />
+            <Route element={<OnboardingChecklistPage />} path={'onboarding-checklist'} />
             <Route element={<ModelDownloadPage />} path={'model-download'} />
             <Route
               element={<QuickConnectionPage />}
@@ -501,6 +504,7 @@ const AppRoutes = () => {
             <Route element={<ShortcutsPage />} path={'shortcuts'} />
           </Route>
         </Route>
+        <Route element={<ModelDownloadTestPage />} path="/model-download-test" />
         <Route
           element={<Navigate replace to={ONBOARDING_STEPS[0].path} />}
           path="*"

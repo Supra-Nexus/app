@@ -16,5 +16,9 @@
   },
   "dependencies": {
     "@tauri-apps/plugin-autostart": "^2.5.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.8.4",
+    "sharp-cli": "^5.2.0"
   }
 }

@@ -1,6 +1,8 @@
 // Store data for the Zoo Store - served from local JSON
 // Can be updated from upstream API when available
 
+import { zooLogoDataUrl } from '@zooai/logo';
+
 export const STORE_AGENTS = [
   {
     id: "zoo-eco-agent",
@@ -8,7 +10,7 @@ export const STORE_AGENTS = [
     description: "An eco-friendly AI assistant focused on sustainability and environmental awareness. Helps with green living tips, carbon footprint calculations, and eco-conscious decision making.",
     author: "Zoo AI Team",
     downloads: 15420,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-eco-assistant",
     category: {
       id: "sustainability",
@@ -23,7 +25,7 @@ export const STORE_AGENTS = [
     description: "Advanced coding assistant with expertise in multiple programming languages. Specializes in code review, debugging, and architecture design.",
     author: "Zoo AI Team",
     downloads: 28350,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-code-master",
     category: {
       id: "development",
@@ -38,7 +40,7 @@ export const STORE_AGENTS = [
     description: "Creative writing and content generation specialist. Helps with storytelling, marketing copy, and artistic brainstorming.",
     author: "Zoo AI Team",
     downloads: 9876,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-creative-studio",
     category: {
       id: "creative",
@@ -53,7 +55,7 @@ export const STORE_AGENTS = [
     description: "Data analysis and visualization expert. Helps with data interpretation, statistical analysis, and creating insightful reports.",
     author: "Zoo AI Team",
     downloads: 12543,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-data-analyst",
     category: {
       id: "analytics",
@@ -68,7 +70,7 @@ export const STORE_AGENTS = [
     description: "Educational assistant for personalized learning. Adapts to your learning style and helps with various subjects.",
     author: "Zoo AI Team",
     downloads: 18920,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-learning-companion",
     category: {
       id: "education",
@@ -83,7 +85,7 @@ export const STORE_AGENTS = [
     description: "Health and wellness advisor providing fitness tips, nutrition guidance, and mental health support.",
     author: "Zoo AI Team",
     downloads: 7654,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-wellness-coach",
     category: {
       id: "health",
@@ -98,7 +100,7 @@ export const STORE_AGENTS = [
     description: "Personal finance assistant for budgeting, investment insights, and financial planning.",
     author: "Zoo AI Team",
     downloads: 11234,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-finance-advisor",
     category: {
       id: "finance",
@@ -113,7 +115,7 @@ export const STORE_AGENTS = [
     description: "Academic and professional research helper. Assists with literature reviews, citations, and fact-checking.",
     author: "Zoo AI Team",
     downloads: 14567,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-research-assistant",
     category: {
       id: "research",
@@ -128,7 +130,7 @@ export const STORE_AGENTS = [
     description: "Travel planning assistant for creating itineraries, finding deals, and discovering destinations.",
     author: "Zoo AI Team",
     downloads: 8901,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-travel-planner",
     category: {
       id: "travel",
@@ -143,7 +145,7 @@ export const STORE_AGENTS = [
     description: "Legal document assistant for contract reviews, legal research, and general legal guidance (not legal advice).",
     author: "Zoo AI Team",
     downloads: 6543,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-legal-assistant",
     category: {
       id: "legal",
@@ -161,7 +163,7 @@ export const STORE_TOOLS = [
     description: "Execute Python code safely in an isolated environment with full standard library support.",
     author: "Zoo AI Team",
     downloads: 45678,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-python-runner",
     category: {
       id: "development",
@@ -176,7 +178,7 @@ export const STORE_TOOLS = [
     description: "Advanced web scraping tool with CSS selectors, XPath, and JavaScript rendering support.",
     author: "Zoo AI Team",
     downloads: 23456,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-web-scraper",
     category: {
       id: "data",
@@ -191,7 +193,7 @@ export const STORE_TOOLS = [
     description: "Comprehensive API testing tool with request builder, response validation, and test automation.",
     author: "Zoo AI Team",
     downloads: 19876,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-api-tester",
     category: {
       id: "development",
@@ -206,7 +208,7 @@ export const STORE_TOOLS = [
     description: "Image manipulation tool with resize, crop, filter, and format conversion capabilities.",
     author: "Zoo AI Team",
     downloads: 34567,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-image-processor",
     category: {
       id: "media",
@@ -221,7 +223,7 @@ export const STORE_TOOLS = [
     description: "PDF manipulation suite for merging, splitting, extracting, and converting PDF documents.",
     author: "Zoo AI Team",
     downloads: 28901,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     routerKey: "zoo-pdf-toolkit",
     category: {
       id: "documents",
@@ -262,7 +264,7 @@ All code runs in isolated Docker containers with limited resources and no networ
     downloads: 45678,
     rating: 4.8,
     reviews: 234,
-    iconUrl: "/zoo-icon.svg",
+    iconUrl: zooLogoDataUrl,
     screenshots: [
       "/screenshots/python-runner-1.png",
       "/screenshots/python-runner-2.png"

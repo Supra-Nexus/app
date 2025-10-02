@@ -1,6 +1,7 @@
 import { cn } from '@zooai/zoo-ui/utils';
 import React, { useContext } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
+import { zooLogoDataUrl } from '@zooai/logo';
 
 import { UpdateBanner } from '../../components/hardware-capabilities/update-banner';
 import { LogoTapContext } from '../terms-conditions';
@@ -12,6 +13,8 @@ export type OnboardingLayoutProps = React.PropsWithChildren<
 const OnboardingLayout = ({ className, ...props }: OnboardingLayoutProps) => {
   const { tapCount, setTapCount, setShowLocalNodeOption } =
     useContext(LogoTapContext);
+  const location = useLocation();
+  const isModelDownloadPage = location.pathname.includes('model-download');
 
   const handleLogoTap = () => {
     const newCount = tapCount + 1;
@@ -22,39 +25,40 @@ const OnboardingLayout = ({ className, ...props }: OnboardingLayoutProps) => {
     }
   };
 
+  // For model download page, use full screen layout
+  if (isModelDownloadPage) {
+    return (
+      <div className={cn('bg-bg-dark relative h-full', className)} {...props}>
+        <UpdateBanner />
+        <div className="h-full">
+          <Outlet />
+        </div>
+      </div>
+    );
+  }
+
+  // For other onboarding pages, keep the centered layout with logo
   return (
     <div
       className={cn(
-        'bg-bg-dark relative mx-auto grid h-full grid-cols-2 flex-col-reverse items-center px-[48px]',
+        'bg-bg-dark relative mx-auto flex h-full items-center justify-center px-[48px]',
         className,
       )}
       {...props}
     >
       <UpdateBanner />
-      <div className="flex h-[calc(100dvh-100px)] items-center justify-center">
+      <div className="flex h-[calc(100dvh-100px)] items-center justify-center w-full">
         <div className="mx-auto flex h-[600px] w-full max-w-lg flex-col gap-12">
           <img
             alt="zoo logo"
             className="w-24 cursor-pointer"
             data-cy="zoo-logo"
             onClick={handleLogoTap}
-            src={'./zoo-logo.png'}
+            src={zooLogoDataUrl}
           />
 
           <div className="flex-1">
             <Outlet />
-          </div>
-        </div>
-      </div>
-      <div className="grid h-full place-items-center">
-        <div className="relative size-full">
-          <div className="absolute left-14 z-10 flex aspect-square size-full items-center object-left bg-blend-darken">
-            <img
-              alt="zoo logo"
-              className="size-full max-h-[70vh] object-cover object-left"
-              data-cy="onboarding-logo"
-              src={'./zoo-logo.png'}
-            />
           </div>
         </div>
       </div>

@@ -41,7 +41,7 @@ import ReactDOM from 'react-dom/client';
 import { useForm, useWatch } from 'react-hook-form';
 import { z } from 'zod';
 
-import logo from '../../../src-tauri/icons/128x128@2x.png';
+import { zooLogoDataUrl } from '@zooai/logo';
 import { OllamaModels } from '../../components/zoo-node-manager/ollama-models';
 import { ALLOWED_OLLAMA_MODELS } from '../../lib/zoo-node-manager/ollama-models';
 import {
@@ -211,7 +211,7 @@ const App = () => {
         data-tauri-drag-region={true}
       />
       <div className="flex flex-row items-center p-4">
-        <img alt="zoo logo" className="h-10 w-10" src={logo} />
+        <img alt="zoo logo" className="h-10 w-10" src={zooLogoDataUrl} />
         <div className="ml-4 flex flex-col">
           <span className="text-lg">Local Zoo Node</span>
           <span className="text-text-secondary text-sm">{`API URL: http://${zooNodeOptions?.node_api_ip}:${zooNodeOptions?.node_api_port}`}</span>

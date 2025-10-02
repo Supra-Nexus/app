@@ -72,7 +72,10 @@ export const useOllamaPullMutation = (
     mutationFn: async (
       input,
     ): Promise<AsyncGenerator<ProgressResponse, unknown, unknown>> => {
-      const ollamaClient = new Ollama(ollamaConfig);
+      const ollamaClient = new Ollama({
+        fetch: removeForbiddenHeadersInOllamaCors,
+        ...ollamaConfig,
+      });
       const pipeGenerator = async function* transformGenerator(generator: {
         [Symbol.asyncIterator](): AsyncGenerator<
           ProgressResponse,
@@ -128,7 +131,10 @@ export const useOllamaRemoveMutation = (
   const queryClient = useQueryClient();
   const response = useMutation({
     mutationFn: async (input): Promise<StatusResponse> => {
-      const ollamaClient = new Ollama(ollamaConfig);
+      const ollamaClient = new Ollama({
+        fetch: removeForbiddenHeadersInOllamaCors,
+        ...ollamaConfig,
+      });
       const response = await ollamaClient.delete({
         model: input.model,
       });

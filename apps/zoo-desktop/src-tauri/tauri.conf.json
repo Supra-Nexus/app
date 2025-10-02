@@ -34,7 +34,7 @@
     },
     "createUpdaterArtifacts": true
   },
-  "productName": "Zoo AI",
+  "productName": "Zoo",
   "version": "../../../package.json",
   "identifier": "com.zoo.desktop",
   "plugins": {
