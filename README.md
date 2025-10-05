@@ -1,6 +1,6 @@
 <h1 align="center">
 <img width="36" height="36" src="assets/icon.png"/>
-  Hanzo
+  Supra
   </h1>
 <div align="center">
 
@@ -65,7 +65,7 @@
 
 ## 🎬 Demo
 
-[![Demo Video](assets/hanzo-screenshot.png)](https://github.com/user-attachments/assets/bc5bb7da-7ca5-477d-838a-8239951b6c01)
+[![Demo Video](assets/hanzo-screenshot.png)]()
 
 _Watch Hanzo agents collaborate to analyze market data, execute trades, and manage complex workflows autonomously._
 
