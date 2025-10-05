@@ -1,5 +1,4 @@
 <h1 align="center">
-<img width="36" height="36" src="assets/icon.png"/>
   Supra
   </h1>
 <div align="center">
