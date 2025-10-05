@@ -15,16 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@zooai/zoo-artifacts": ["libs/zoo-artifacts/src/index.ts"],
-      "@zooai/zoo-i18n": ["libs/zoo-i18n/src/index.ts"],
-      "@zooai/zoo-message-ts/*": ["libs/zoo-message-ts/src/*.ts"],
-      "@zooai/zoo-node-state": ["libs/zoo-node-state/src/index.ts"],
-      "@zooai/zoo-node-state/*": ["libs/zoo-node-state/src/*.ts"],
-      "@zooai/zoo-ui": ["libs/zoo-ui/src/index.ts"],
-      "@zooai/zoo-ui/assets": ["libs/zoo-ui/src/assets/index.ts"],
-      "@zooai/zoo-ui/helpers": ["libs/zoo-ui/src/helpers/index.ts"],
-      "@zooai/zoo-ui/hooks": ["libs/zoo-ui/src/hooks/index.ts"],
-      "@zooai/zoo-ui/utils": ["libs/zoo-ui/src/utils.ts"]
+      "@supraai/supra-artifacts": ["libs/supra-artifacts/src/index.ts"],
+      "@supraai/supra-i18n": ["libs/supra-i18n/src/index.ts"],
+      "@supraai/supra-message-ts/*": ["libs/supra-message-ts/src/*.ts"],
+      "@supraai/supra-node-state": ["libs/supra-node-state/src/index.ts"],
+      "@supraai/supra-node-state/*": ["libs/supra-node-state/src/*.ts"],
+      "@supraai/supra-ui": ["libs/supra-ui/src/index.ts"],
+      "@supraai/supra-ui/assets": ["libs/supra-ui/src/assets/index.ts"],
+      "@supraai/supra-ui/helpers": ["libs/supra-ui/src/helpers/index.ts"],
+      "@supraai/supra-ui/hooks": ["libs/supra-ui/src/hooks/index.ts"],
+      "@supraai/supra-ui/utils": ["libs/supra-ui/src/utils.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

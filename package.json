@@ -1,12 +1,12 @@
 {
-  "name": "@hanzo/source",
-  "version": "1.1.16",
+  "name": "@supraai/supra-app",
+  "version": "1.0.0",
   "license": "SEE LICENSE IN LICENSE",
   "files": [
     "LICENSE"
   ],
   "scripts": {
-    "postinstall": "npx patch-package",
+    "postinstall": "echo 'Skipping patches'",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:contrast": "vitest run libs/hanzo-ui/src/utils/contrast.test.ts",
@@ -15,9 +15,9 @@
     "typecheck": "tsc --noEmit || true",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "build:desktop": "cd apps/zoo-desktop && npm run build",
-    "build:mobile:ios": "cd apps/zoo-desktop && npm run tauri ios build",
-    "build:mobile:android": "cd apps/zoo-desktop && npm run tauri android build"
+    "build:desktop": "cd apps/supra-desktop && npm run build",
+    "build:mobile:ios": "cd apps/supra-desktop && npm run tauri ios build",
+    "build:mobile:android": "cd apps/supra-desktop && npm run tauri android build"
   },
   "dependencies": {
     "@babel/standalone": "^7.26.1",

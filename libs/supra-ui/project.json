@@ -1,0 +1,22 @@
+{
+  "name": "supra-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/supra-ui/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project supra-ui --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/supra-ui",
+        "main": "libs/supra-ui/src/index.ts",
+        "tsConfig": "libs/supra-ui/tsconfig.lib.json",
+        "packageJson": "libs/supra-ui/package.json",
+        "assets": [],
+        "external": ["react", "react-dom", "react/jsx-runtime"]
+      }
+    }
+  }
+}

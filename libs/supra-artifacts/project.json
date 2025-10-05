@@ -1,0 +1,29 @@
+{
+  "name": "supra-artifacts",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/supra-artifacts/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/libs/supra-artifacts",
+        "main": "libs/supra-artifacts/src/index.ts",
+        "tsConfig": "libs/supra-artifacts/tsconfig.lib.json",
+        "packageJson": "libs/supra-artifacts/package.json",
+        "assets": []
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    }
+  }
+}

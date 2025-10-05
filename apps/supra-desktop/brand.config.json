@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "Supra",
+    "fullName": "Supra AI",
+    "description": "Your private AI assistant powered by local models",
+    "website": "https://supra.ai",
+    "copyright": "© 2025 Supra AI. All rights reserved.",
+    "colors": {
+      "primary": "#10B981",
+      "secondary": "#059669",
+      "accent": "#34D399",
+      "background": "#000000",
+      "foreground": "#FFFFFF"
+    },
+    "models": {
+      "eco": {
+        "name": "Supra Eco",
+        "base": "qwen3:4b-thinking-2507",
+        "description": "🌱 Your private AI assistant. Advanced reasoning with Qwen3 4B Thinking model, optimized for everyday tasks."
+      },
+      "coder": {
+        "name": "Supra Coder",
+        "base": "deepseek-coder-v2.5",
+        "description": "💻 Your private coding assistant. Specialized in code generation, debugging, and technical explanations."
+      },
+      "nano": {
+        "name": "Supra Nano-1",
+        "base": "qwen3:0.5b-thinking",
+        "description": "⚡ Ultra-fast responses for simple tasks. Perfect for quick answers and basic assistance."
+      }
+    },
+    "features": {
+      "enableStore": true,
+      "enableBackgroundMode": true,
+      "enableOnboarding": true,
+      "defaultModel": "eco"
+    },
+    "paths": {
+      "nodeManager": "supra-node-manager",
+      "desktop": "supra-desktop"
+    }
+  }
+}

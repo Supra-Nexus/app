@@ -1,0 +1,34 @@
+{
+  "identifier": "supra-node-manager",
+  "description": "permissions that were migrated from v1",
+  "local": true,
+  "windows": ["supra-node-manager"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-start-dragging",
+    "log:default",
+    "dialog:allow-save",
+    "fs:allow-download-write",
+    "dialog:allow-open",
+    {
+      "identifier": "opener:allow-open-path",
+      "allow": [
+        {
+          "path": "$HOME/Downloads/*"
+        }
+      ]
+    }
+  ],
+  "commands.allow": [
+    "supra_node_is_running",
+    "supra_node_get_options",
+    "supra_node_set_options",
+    "supra_node_spawn",
+    "supra_node_kill",
+    "supra_node_remove_storage",
+    "supra_node_set_default_options",
+    "supra_node_get_ollama_api_url",
+    "supra_node_get_default_model",
+    "retrieve_logs"
+  ]
+}

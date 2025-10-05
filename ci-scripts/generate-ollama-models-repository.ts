@@ -125,9 +125,9 @@ const main = async () => {
       }
     });
   // Check for brand configuration or use default
-  const brandConfigPath = path.join(__dirname, '../apps/zoo-desktop/brand.config.json');
-  let desktopDir = 'zoo-desktop';
-  let nodeManagerDir = 'zoo-node-manager';
+  const brandConfigPath = path.join(__dirname, '../apps/supra-desktop/brand.config.json');
+  let desktopDir = 'supra-desktop';
+  let nodeManagerDir = 'supra-node-manager';
   
   if (fs.existsSync(brandConfigPath)) {
     const brandConfig = JSON.parse(fs.readFileSync(brandConfigPath, 'utf8'));

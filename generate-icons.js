@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Zoo Logo Icon Generator
- * Generates all required icons for Zoo app with the final perfect settings
+ * Supra Logo Icon Generator
+ * Generates all required icons for Supra app with the final perfect settings
  */
 
 const fs = require('fs');
@@ -104,7 +104,7 @@ async function generateIcon(svgString, outputPath, size) {
 }
 
 async function generateAllIcons() {
-    console.log('🎨 Zoo Logo Icon Generator');
+    console.log('🎨 Supra Logo Icon Generator');
     console.log('========================\n');
 
     const colorSVG = generateColorSVG();
@@ -114,37 +114,37 @@ async function generateAllIcons() {
     const iconConfigs = [
         // Main app assets
         { svg: colorSVG, path: 'assets/icon.png', size: 512 },
-        { svg: colorSVG, path: 'zoo-logo.png', size: 256 },
+        { svg: colorSVG, path: 'supra-logo.png', size: 256 },
 
         // Tauri desktop icons
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_16x16.png', size: 16 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_16x16@2x.png', size: 32 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_32x32.png', size: 32 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_32x32@2x.png', size: 64 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_128x128.png', size: 128 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_128x128@2x.png', size: 256 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_256x256.png', size: 256 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_256x256@2x.png', size: 512 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_512x512.png', size: 512 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_512x512@2x.png', size: 1024 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/src-tauri/icons/icon_1024x1024.png', size: 1024 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_16x16.png', size: 16 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_16x16@2x.png', size: 32 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_32x32.png', size: 32 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_32x32@2x.png', size: 64 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_128x128.png', size: 128 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_128x128@2x.png', size: 256 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_256x256.png', size: 256 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_256x256@2x.png', size: 512 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_512x512.png', size: 512 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_512x512@2x.png', size: 1024 },
+        { svg: colorSVG, path: 'apps/supra-desktop/src-tauri/icons/icon_1024x1024.png', size: 1024 },
 
         // Menu bar templates (monochrome)
-        { svg: monoSVG, path: 'apps/zoo-desktop/src-tauri/icons/iconTemplate.png', size: 16 },
-        { svg: monoSVG, path: 'apps/zoo-desktop/src-tauri/icons/iconTemplate@1.5x.png', size: 24 },
-        { svg: monoSVG, path: 'apps/zoo-desktop/src-tauri/icons/iconTemplate@2x.png', size: 32 },
-        { svg: monoSVG, path: 'apps/zoo-desktop/src-tauri/icons/iconTemplate@3x.png', size: 48 },
+        { svg: monoSVG, path: 'apps/supra-desktop/src-tauri/icons/iconTemplate.png', size: 16 },
+        { svg: monoSVG, path: 'apps/supra-desktop/src-tauri/icons/iconTemplate@1.5x.png', size: 24 },
+        { svg: monoSVG, path: 'apps/supra-desktop/src-tauri/icons/iconTemplate@2x.png', size: 32 },
+        { svg: monoSVG, path: 'apps/supra-desktop/src-tauri/icons/iconTemplate@3x.png', size: 48 },
 
         // Public directory web icons
-        { svg: colorSVG, path: 'apps/zoo-desktop/public/favicon.png', size: 32 },
-        { svg: colorSVG, path: 'apps/zoo-desktop/public/zoo-logo.png', size: 256 },
+        { svg: colorSVG, path: 'apps/supra-desktop/public/favicon.png', size: 32 },
+        { svg: colorSVG, path: 'apps/supra-desktop/public/supra-logo.png', size: 256 },
     ];
 
     // Save SVG sources
-    const svgDir = 'apps/zoo-desktop/src-tauri/icons';
+    const svgDir = 'apps/supra-desktop/src-tauri/icons';
     fs.writeFileSync(path.join(svgDir, 'icon.svg'), colorSVG);
-    fs.writeFileSync(path.join(svgDir, 'zoo-template-final.svg'), monoSVG);
-    fs.writeFileSync('apps/zoo-desktop/public/zoo-logo.svg', colorSVG);
+    fs.writeFileSync(path.join(svgDir, 'supra-template-final.svg'), monoSVG);
+    fs.writeFileSync('apps/supra-desktop/public/supra-logo.svg', colorSVG);
     console.log('✓ Saved SVG source files\n');
 
     // Generate all PNG icons

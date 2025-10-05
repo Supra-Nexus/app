@@ -29,6 +29,6 @@
     "build",
     "**/*.spec.ts",
     "**/*.test.ts",
-    "apps/zoo-desktop/src-tauri"
+    "apps/supra-desktop/src-tauri"
   ]
 }
