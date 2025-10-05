@@ -17,7 +17,7 @@
 <p align="center">
   <a href="https://github.com/hanzoai/app/stargazers"><img src="https://img.shields.io/github/stars/hanzoai/app?style=social" alt="GitHub stars"></a>
   <a href="https://discord.gg/EuA45U3sEu"><img src="https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://x.com/HanzoLocalAI"><img src="https://img.shields.io/twitter/follow/HanzoLocalAI?style=social" alt="Twitter Follow"></a>
+  <a href="https://x.com/SupraLocalAI"><img src="https://img.shields.io/twitter/follow/SupraLocalAI?style=social" alt="Twitter Follow"></a>
 </p>
 
 <p align="center">
@@ -281,7 +281,7 @@ npx nx run hanzo-i18n:i18n
 
 - **[Official Documentation](https://docs.supra.nexus)** – Comprehensive guides and API reference
 - **[Discord Community](https://discord.gg/EuA45U3sEu)** – Get help and connect with other developers
-- **[Twitter Updates](https://x.com/HanzoLocalAI)** – Latest news and announcements
+- **[Twitter Updates](https://x.com/SupraLocalAI)** – Latest news and announcements
 
 ---
 
