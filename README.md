@@ -22,7 +22,7 @@
 <p align="center">
   <strong>Build collaborative AI agents that work together, handle payments, and automate complex workflows</strong>
   <br/>
-  Hanzo is a free, open-source platform that democratizes AI agent creation.
+  Supra is a free, open-source platform that democratizes AI agent creation.
   No coding required – just drag, drop, and deploy intelligent agents that can work across platforms and handle real-world tasks.
 </p>
 
