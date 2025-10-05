@@ -1,4 +1,4 @@
-import { importMcpServerFromGithubUrl } from '@hanzo_network/hanzo-message-ts/api/mcp-servers/index';
+import { importMcpServerFromGithubUrl } from '@supra_network/hanzo-message-ts/api/mcp-servers/index';
 
 import type { ImportMCPServerFromGithubURLOutput } from './types';
 

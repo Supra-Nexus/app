@@ -160,7 +160,7 @@
     "editMessage": {
       "warning": "Esto reiniciará tu conversación desde aquí."
     },
-    "emptyStateDescription": "Para preguntas rápidas, presiona ⌘ + Shift + J para usar Hanzo Spotlight",
+    "emptyStateDescription": "Para preguntas rápidas, presiona ⌘ + Shift + J para usar Supra Spotlight",
     "emptyStateTitle": "Pregunta a Hanzo IA",
     "enterMessage": "Introducir Mensaje",
     "failedToOpenChatFolder": "Por favor, sube un archivo al chat primero",
@@ -279,7 +279,7 @@
     "seeOptions": "Ver Opciones",
     "selectItem": "Seleccione un elemento para ver detalles",
     "send": "Enviar",
-    "hanzoPrivate": "Hanzo Privado (Local)",
+    "hanzoPrivate": "Supra Privado (Local)",
     "showLess": "Mostrar menos",
     "showMore": "Más",
     "signUpHanzoHosting": "Registrarse en Hanzo Hosting",
@@ -418,7 +418,7 @@
   },
   "galxe": {
     "errors": {
-      "registerDesktopInstallation": "Error al registrar tu instalación de Hanzo Desktop. Por favor, asegúrate de que tu Dirección EVM no se haya utilizado previamente para registrar una instalación diferente."
+      "registerDesktopInstallation": "Error al registrar tu instalación de Supra Desktop. Por favor, asegúrate de que tu Dirección EVM no se haya utilizado previamente para registrar una instalación diferente."
     },
     "form": {
       "evmAddress": "Dirección EVM",
@@ -430,7 +430,7 @@
     "goToGalxeQuest": "Ver nuestra Búsqueda Galxe",
     "label": "Quest de Galxe",
     "success": {
-      "registerDesktopInstallation": "Tu instalación de Hanzo Desktop se registró exitosamente. Puede tardar algunas horas en registrarse en la búsqueda Galxe."
+      "registerDesktopInstallation": "Tu instalación de Supra Desktop se registró exitosamente. Puede tardar algunas horas en registrarse en la búsqueda Galxe."
     }
   },
   "homepage": {
@@ -699,8 +699,8 @@
     "dismiss": "Descartar Lista de Verificación",
     "getStartedChecklist": "Lista de verificación para comenzar",
     "getStartedText": "Comienza con Hanzo",
-    "setupHanzoDesktop": "Configurar Hanzo Desktop",
-    "setupHanzoDesktopDescription": "Configura Hanzo Desktop para comenzar",
+    "setupHanzoDesktop": "Configurar Supra Desktop",
+    "setupHanzoDesktopDescription": "Configura Supra Desktop para comenzar",
     "uploadAFile": "Subir un archivo",
     "uploadAFileDescription": "Guarda tus notas, sitios web, documentos y otros de forma segura en un solo lugar."
   },
@@ -730,7 +730,7 @@
   },
   "quickAsk": {
     "emptyStateDescription": "Prueba con \"¿Cómo hacer una solicitud HTTP en JavaScript?\", \"Dame las 10 mejores canciones de rock de los 80\", \"Explícame cómo funciona Internet\"",
-    "emptyStateTitle": "Pregunta a Hanzo AI"
+    "emptyStateTitle": "Pregunta a Supra AI"
   },
   "quickConnection": {
     "connectingToNode": "Conectando a tu Nodo Hanzo local",
@@ -875,7 +875,7 @@
       "troubleRegisterIdentity": "¿Problemas para registrar tu identidad?",
       "updatedIdentity": "Identidad Hanzo actualizada con éxito."
     },
-    "hanzoVersion": "Versión de Hanzo Desktop:",
+    "hanzoVersion": "Versión de Supra Desktop:",
     "shortcutKey": {
       "description": "Modifica la tecla de acceso directo para abrir la barra lateral",
       "label": "Tecla de Acceso Directo"

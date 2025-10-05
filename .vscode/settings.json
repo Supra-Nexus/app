@@ -9,7 +9,7 @@
       "url": "https://json.schemastore.org/chrome-manifest.json"
     }
   ],
-  "rust-analyzer.linkedProjects": ["apps/hanzo-desktop/src-tauri/Cargo.toml"],
+  "rust-analyzer.linkedProjects": ["apps/supra-desktop/src-tauri/Cargo.toml"],
   "rust-analyzer.check.command": "check",
   "tailwindCSS.classFunctions": ["cva", "cn"],
   "tailwindCSS.experimental.configFile": "libs/hanzo-ui/src/styles/styles.css",

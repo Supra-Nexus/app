@@ -1,4 +1,4 @@
-import { setRecurringTask as setRecurringTaskApi } from '@hanzo_network/hanzo-message-ts/api/recurring-tasks/index';
+import { setRecurringTask as setRecurringTaskApi } from '@supra_network/hanzo-message-ts/api/recurring-tasks/index';
 
 import { type UpdateRecurringTaskInput } from './types';
 

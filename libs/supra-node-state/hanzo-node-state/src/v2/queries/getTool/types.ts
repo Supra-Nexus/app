@@ -1,5 +1,5 @@
-import { type Token } from '@hanzo_network/hanzo-message-ts/api/general/types';
-import { type GetToolResponse } from '@hanzo_network/hanzo-message-ts/api/tools/types';
+import { type Token } from '@supra_network/hanzo-message-ts/api/general/types';
+import { type GetToolResponse } from '@supra_network/hanzo-message-ts/api/tools/types';
 
 export type GetToolInput = Token & {
   nodeAddress: string;

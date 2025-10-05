@@ -1,4 +1,4 @@
-import { buildInboxIdFromJobId } from '@hanzo_network/hanzo-message-ts/utils/inbox_name_handler';
+import { buildInboxIdFromJobId } from '@supra_network/hanzo-message-ts/utils/inbox_name_handler';
 import {
   useMutation,
   type UseMutationOptions,

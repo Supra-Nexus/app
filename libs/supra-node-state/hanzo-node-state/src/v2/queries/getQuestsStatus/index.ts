@@ -1,4 +1,4 @@
-import { getQuestsStatus as getQuestsStatusApi } from '@hanzo_network/hanzo-message-ts/api/quests/index';
+import { getQuestsStatus as getQuestsStatusApi } from '@supra_network/hanzo-message-ts/api/quests/index';
 
 import { type GetQuestsStatusInput } from './types';
 

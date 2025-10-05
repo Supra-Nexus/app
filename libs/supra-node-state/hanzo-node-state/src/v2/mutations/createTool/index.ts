@@ -1,4 +1,4 @@
-import { createTool as createToolApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { createTool as createToolApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type CreateToolInput } from './types';
 

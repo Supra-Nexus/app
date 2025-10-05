@@ -1,4 +1,4 @@
-import { copyToolAssets as copyToolAssetsApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { copyToolAssets as copyToolAssetsApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type CopyToolAssetsInput } from './types';
 

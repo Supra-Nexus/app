@@ -1,8 +1,8 @@
 import {
   saveToolCode as saveToolCodeApi,
   toggleEnableTool,
-} from '@hanzo_network/hanzo-message-ts/api/tools/index';
-import {} from '@hanzo_network/hanzo-message-ts/api/tools/types';
+} from '@supra_network/hanzo-message-ts/api/tools/index';
+import {} from '@supra_network/hanzo-message-ts/api/tools/types';
 import { merge } from 'ts-deepmerge';
 
 import { type SaveToolCodeInput } from './types';

@@ -1,4 +1,4 @@
-import { removeFsItem as removeFsItemApi } from '@hanzo_network/hanzo-message-ts/api/vector-fs/index';
+import { removeFsItem as removeFsItemApi } from '@supra_network/hanzo-message-ts/api/vector-fs/index';
 
 import { type RemoveFsItemInput } from './types';
 

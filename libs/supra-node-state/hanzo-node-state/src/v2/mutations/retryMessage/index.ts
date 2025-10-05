@@ -1,4 +1,4 @@
-import { retryMessage as retryMessageApi } from '@hanzo_network/hanzo-message-ts/api/jobs/index';
+import { retryMessage as retryMessageApi } from '@supra_network/hanzo-message-ts/api/jobs/index';
 
 import { type RetryMessageInput } from './types';
 

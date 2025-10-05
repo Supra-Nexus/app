@@ -1,7 +1,7 @@
 {
-  "name": "@hanzo_network/hanzo-message-ts",
+  "name": "@supra_network/hanzo-message-ts",
   "version": "0.4.5",
-  "description": "Hanzo Message TS wrapper for wasm library",
+  "description": "Supra Message TS wrapper for wasm library",
   "type": "module",
   "main": "src/index.js",
   "types": "src/index.d.ts",

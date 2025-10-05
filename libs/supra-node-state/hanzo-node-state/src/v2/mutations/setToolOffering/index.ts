@@ -1,4 +1,4 @@
-import { setToolOffering as setToolOfferingApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { setToolOffering as setToolOfferingApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type SetToolOfferingInput } from './types';
 

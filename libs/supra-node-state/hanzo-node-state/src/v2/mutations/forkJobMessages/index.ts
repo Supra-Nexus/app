@@ -1,4 +1,4 @@
-import { forkJobMessages as forkJobMessagesApi } from '@hanzo_network/hanzo-message-ts/api/jobs/index';
+import { forkJobMessages as forkJobMessagesApi } from '@supra_network/hanzo-message-ts/api/jobs/index';
 
 import { type ForkJobMessagesInput } from './types';
 

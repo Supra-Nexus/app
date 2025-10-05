@@ -1,4 +1,4 @@
-import { useTranslation } from '@hanzo_network/hanzo-i18n';
+import { useTranslation } from '@supra_network/hanzo-i18n';
 import { partial } from 'filesize';
 import { Loader2, Trash, Upload } from 'lucide-react';
 import React, { useEffect, useState } from 'react';

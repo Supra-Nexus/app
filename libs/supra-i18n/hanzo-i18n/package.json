@@ -1,5 +1,5 @@
 {
-  "name": "@hanzo_network/hanzo-i18n",
+  "name": "@supra_network/hanzo-i18n",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",

@@ -1,4 +1,4 @@
-import { stopGeneratingLLM as stopGeneratingLLMApi } from '@hanzo_network/hanzo-message-ts/api/jobs/index';
+import { stopGeneratingLLM as stopGeneratingLLMApi } from '@supra_network/hanzo-message-ts/api/jobs/index';
 
 import { type StopGeneratingLLMInput } from './types';
 

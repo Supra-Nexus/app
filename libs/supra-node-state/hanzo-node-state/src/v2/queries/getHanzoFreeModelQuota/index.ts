@@ -1,5 +1,5 @@
-import { getHanzoFreeModelQuota as getHanzoFreeModelQuotaApi } from '@hanzo_network/hanzo-message-ts/api/general/index';
-import { type GetHanzoFreeModelQuotaResponse } from '@hanzo_network/hanzo-message-ts/api/general/types';
+import { getHanzoFreeModelQuota as getHanzoFreeModelQuotaApi } from '@supra_network/hanzo-message-ts/api/general/index';
+import { type GetHanzoFreeModelQuotaResponse } from '@supra_network/hanzo-message-ts/api/general/types';
 
 import {
   type GetHanzoFreeModelQuotaInput,

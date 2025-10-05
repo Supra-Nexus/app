@@ -1,8 +1,8 @@
-import { type Token } from '@hanzo_network/hanzo-message-ts/api/general/types';
-import { type JobConfig } from '@hanzo_network/hanzo-message-ts/api/jobs/types';
+import { type Token } from '@supra_network/hanzo-message-ts/api/general/types';
+import { type JobConfig } from '@supra_network/hanzo-message-ts/api/jobs/types';
 import {
   type CreateRecurringTaskResponse
-} from '@hanzo_network/hanzo-message-ts/api/recurring-tasks/types';
+} from '@supra_network/hanzo-message-ts/api/recurring-tasks/types';
 
 export type CreateRecurringTaskOutput = CreateRecurringTaskResponse;
 

@@ -124,7 +124,7 @@
     },
     "label": "分析",
     "moreInfo": "プライバシーに関する当社のプラクティスに関する詳細情報については、<a>プライバシーポリシー</a>をご覧ください",
-    "title": "Hanzoの改善にご協力ください"
+    "title": "Supraの改善にご協力ください"
   },
   "appReset": {
     "action": "アプリをリセット",
@@ -161,7 +161,7 @@
       "warning": "ここから会話をやり直します。"
     },
     "emptyStateDescription": "簡単な質問の場合は、⌘ + Shift + Jを押して新海スポットライトを使用してください",
-    "emptyStateTitle": "Hanzo AIに質問してみてください",
+    "emptyStateTitle": "Supra AIに質問してみてください",
     "enterMessage": "メッセージを入力",
     "failedToOpenChatFolder": "最初にチャットにファイルをアップロードしてください",
     "fileProcessing": {
@@ -194,7 +194,7 @@
     "form": {
       "message": "メッセージ",
       "messagePlaceholder": "メッセージを入力してください",
-      "hanzoIdentity": "Hanzo Identity"
+      "hanzoIdentity": "Supra Identity"
     }
   },
   "codeRunner": {
@@ -249,7 +249,7 @@
     "incomplete": "不完全",
     "install": "インストール",
     "installed": "インストール済み",
-    "logInHanzoHosting": "Hanzo Hostingにログイン",
+    "logInHanzoHosting": "Supra Hostingにログイン",
     "more": "もっと見る",
     "moreOptions": "その他のオプション",
     "next": "次へ",
@@ -279,10 +279,10 @@
     "seeOptions": "オプションを表示",
     "selectItem": "詳細を表示する項目を選択",
     "send": "送信",
-    "hanzoPrivate": "Hanzoプライベート（ローカル）",
+    "hanzoPrivate": "Supraプライベート（ローカル）",
     "showLess": "表示を減らす",
     "showMore": "もっと見る",
-    "signUpHanzoHosting": "Hanzo Hostingにサインアップ",
+    "signUpHanzoHosting": "Supra Hostingにサインアップ",
     "soon": "近日公開",
     "termsAndConditionsText": "<a>利用規約</a>に同意し、<b>プライバシーポリシー</b>に同意します",
     "thinking": "考え中...",
@@ -333,7 +333,7 @@
       "privacy": "<b>プライバシー重視:</b> データはオフライン機能と強力なプライバシー保護で安全に保護されます。",
       "tools": "<b>日常業務のためのツール:</b> 100以上の統合をサポートし、さらに増え続けています。"
     },
-    "localAI": "Hanzo ローカルAI",
+    "localAI": "Supra ローカルAI",
     "model": {
       "commandr7bBenefits": {
         "fast": "<b>迅速な実行:</b> ユーザーは、中程度のハードウェアで効率的に動作し、遅延をほとんど感じることなく、より迅速な応答とスムーズなインタラクションを実現していると報告しています。",
@@ -384,7 +384,7 @@
   },
   "errors": {
     "nodeUnavailable": {
-      "description": "Hanzoノードに接続できません。ノードがオフラインになっているか、インターネット接続が切断されている可能性があります",
+      "description": "Supraノードに接続できません。ノードがオフラインになっているか、インターネット接続が切断されている可能性があります",
       "title": "ノードが利用できません"
     }
   },
@@ -399,7 +399,7 @@
     "restoreText": "パスフレーズと一緒に使用して、接続をHanzoノードに復元します"
   },
   "extension": {
-    "welcome": "Hanzo Visorを使用してAIでWebブラウジング体験を変えましょう ✨"
+    "welcome": "Supra Visorを使用してAIでWebブラウジング体験を変えましょう ✨"
   },
   "feedback": {
     "button": "フィードバック",
@@ -418,7 +418,7 @@
   },
   "galxe": {
     "errors": {
-      "registerDesktopInstallation": "Hanzo Desktopのインストールを登録する際にエラーが発生しました。以前に使用されたEVMアドレスを確認してください。"
+      "registerDesktopInstallation": "Supra Desktopのインストールを登録する際にエラーが発生しました。以前に使用されたEVMアドレスを確認してください。"
     },
     "form": {
       "evmAddress": "EVMアドレス",
@@ -430,7 +430,7 @@
     "goToGalxeQuest": "Galxeクエストを確認",
     "label": "Galxeクエスト",
     "success": {
-      "registerDesktopInstallation": "Hanzo Desktopのインストールが正常に登録されました。Galxeクエストに登録されるまで数時間かかる場合があります。"
+      "registerDesktopInstallation": "Supra Desktopのインストールが正常に登録されました。Galxeクエストに登録されるまで数時間かかる場合があります。"
     }
   },
   "homepage": {
@@ -499,7 +499,7 @@
       "installTitle": "AIモデルをインストール"
     },
     "notFound": {
-      "description": "最初のAIを接続して、Hanzo AIに質問を始めてください。OpenAIを接続してみてください。",
+      "description": "最初のAIを接続して、Supra AIに質問を始めてください。OpenAIを接続してみてください。",
       "title": "利用可能なAIがありません"
     },
     "success": {
@@ -534,12 +534,12 @@
   "mcpPage": {
     "exposeToolsDescription": "MCPを通じてAIツールを公開し、他のMCPクライアントとシームレスに統合して機能を拡張します。",
     "exposeToolsTab": "ツールを公開",
-    "helpfulLinks": "Hanzoと接続するための便利なMCPは smithery.ai と composio.dev にあります。",
+    "helpfulLinks": "Supraと接続するための便利なMCPは smithery.ai と composio.dev にあります。",
     "mcpServersDescription": "MCPサーバーに接続して天気情報、株価、翻訳サービスなどの外部データソースやツールに即座にアクセスします。\nカスタム統合を構築せずとも、リアルタイムの情報と新しいリソースへの簡単なアクセスでシステムの機能を拡張できます。"
   },
   "mcpServers": {
     "add": "MCPサーバーを追加",
-    "addDescription": "Hanzoノードに接続する新しいMCPサーバーを設定します",
+    "addDescription": "Supraノードに接続する新しいMCPサーバーを設定します",
     "addFailed": "MCPサーバーの追加に失敗しました",
     "addFromGitHub": "GitHubから追加",
     "addSuccess": "MCPサーバーが正常に追加されました",
@@ -605,7 +605,7 @@
   "networkAgentsPage": {
     "addAgent": "エージェントを追加",
     "addAgentFromId": "IDからエージェントを追加",
-    "addAgentFromIdDescription": "Hanzo IDを使用してコレクションにエージェントを追加します。例: @@official.sep-hanzo/main/agent/youtube_expert",
+    "addAgentFromIdDescription": "Supra IDを使用してコレクションにエージェントを追加します。例: @@official.sep-hanzo/main/agent/youtube_expert",
     "addAgentFromIdHelper": "追加したいエージェントのHanzo IDを入力してください。",
     "addAgentFromIdPlaceholder": "例: @@official.sep-hanzo/main/agent/youtube_expert",
     "addedDescription": "{{name}}があなたのコレクションに追加されました。チャットを開始して使用してください！",
@@ -698,9 +698,9 @@
     "createToolDescription": "強力なAIツールを使って、ワークフローを作成、自動化、最適化します。",
     "dismiss": "チェックリストを閉じる",
     "getStartedChecklist": "開始チェックリスト",
-    "getStartedText": "Hanzoを始めましょう",
-    "setupHanzoDesktop": "Hanzoデスクトップのセットアップ",
-    "setupHanzoDesktopDescription": "Hanzoデスクトップのセットアップを行いましょう",
+    "getStartedText": "Supraを始めましょう",
+    "setupHanzoDesktop": "Supraデスクトップのセットアップ",
+    "setupHanzoDesktopDescription": "Supraデスクトップのセットアップを行いましょう",
     "uploadAFile": "ファイルをアップロード",
     "uploadAFileDescription": "ノート、ウェブサイト、ドキュメントなどを安全に保存"
   },
@@ -810,7 +810,7 @@
       "promptLibrary": "プロンプトライブラリ",
       "publicKeys": "公開鍵",
       "remoteAccess": "リモートアクセス",
-      "hanzoNode": "Hanzoノードマネージャー"
+      "hanzoNode": "Supraノードマネージャー"
     },
     "maxChatIterations": {
       "description": "チャットメッセージを処理するための最大反復回数",
@@ -837,7 +837,7 @@
     },
     "quickAccessButton": {
       "description": "クイックアクセスボタンはクリックして保持して移動できます",
-      "label": "Hanzoクイックアクセスボタンを表示"
+      "label": "Supraクイックアクセスボタンを表示"
     },
     "registerNewCode": {
       "label": "新しいデバイスを登録"
@@ -866,16 +866,16 @@
     "hanzoIdentity": {
       "checkIdentityInSync": "新海アイデンティティを確認",
       "checkIdentityInSyncDescription": "新海のアイデンティティが正確に同期しているかを確認します。",
-      "error": "Hanzo Identityの更新中にエラーが発生しました",
-      "goToHanzoIdentity": "私のHanzo Identityに移動",
-      "label": "Hanzoアイデンティティ",
-      "registerIdentity": "Hanzo Identityを登録",
+      "error": "Supra Identityの更新中にエラーが発生しました",
+      "goToHanzoIdentity": "私のSupra Identityに移動",
+      "label": "Supraアイデンティティ",
+      "registerIdentity": "Supra Identityを登録",
       "saveWillRestartApp": "保存すると、変更を適用するためにアプリが再起動します",
-      "success": "Hanzo Identityが正常に更新されました",
+      "success": "Supra Identityが正常に更新されました",
       "troubleRegisterIdentity": "あなたのアイデンティティの登録に問題がありますか？",
-      "updatedIdentity": "Hanzoアイデンティティが正常に更新されました"
+      "updatedIdentity": "Supraアイデンティティが正常に更新されました"
     },
-    "hanzoVersion": "Hanzo Desktopバージョン：",
+    "hanzoVersion": "Supra Desktopバージョン：",
     "shortcutKey": {
       "description": "サイドバーを起動するショートカットキーを変更します",
       "label": "ショートカットキー"
@@ -894,7 +894,7 @@
     }
   },
   "hanzoNode": {
-    "manager": "Hanzoノードマネージャー",
+    "manager": "Supraノードマネージャー",
     "models": {
       "errors": {
         "modelInstalled": "モデル {{modelName}} のインストール中にエラーが発生しました",
@@ -945,8 +945,8 @@
       "option3": "<b>すべてをリセット：</b> 暗号化キーと署名キーを含むHanzoノードのすべてのデータを永久に削除します。",
       "title": "接続できません"
     },
-    "restartNode": "Hanzoノードを再起動してください",
-    "unavailable": "Hanzoノードが利用できません"
+    "restartNode": "Supraノードを再起動してください",
+    "unavailable": "Supraノードが利用できません"
   },
   "tasks": {
     "runNow": "今すぐ実行"
@@ -1114,7 +1114,7 @@
     },
     "shareFolderWarning": {
       "action": "ここをクリックして方法を学ぶ",
-      "text": "Hanzoネットワークを介してフォルダを共有する前に、Hanzoアイデンティティを登録する必要があります。",
+      "text": "Supraネットワークを介してフォルダを共有する前に、Hanzoアイデンティティを登録する必要があります。",
       "title": "フォルダ共有を有効にする"
     },
     "sharedFolders": "共有フォルダ",

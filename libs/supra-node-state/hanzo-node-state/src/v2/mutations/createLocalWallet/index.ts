@@ -1,4 +1,4 @@
-import { createLocalWallet as createLocalWalletApi } from '@hanzo_network/hanzo-message-ts/api/wallets';
+import { createLocalWallet as createLocalWalletApi } from '@supra_network/hanzo-message-ts/api/wallets';
 
 import { type CreateLocalWalletInput } from './types';
 

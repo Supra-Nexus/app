@@ -1,8 +1,8 @@
-# Hanzo Desktop build/update system
+# Supra Desktop build/update system
 
 ## Build
 
-Hanzo Desktop compiles for:
+Supra Desktop compiles for:
 
 | Platform | Format    |
 |----------|-----------|
@@ -12,7 +12,7 @@ Hanzo Desktop compiles for:
 
 To build any of these artifact we execute:
 
-`npx nx build hanzo-desktop`
+`npx nx build supra-desktop`
 
 This will generate at least 3 artifacts for the current platform:
 
@@ -24,17 +24,17 @@ This will generate at least 3 artifacts for the current platform:
 
 Artifact examples
 - MacOS
-  -`apps/hanzo-desktop/src-tauri/target/release/bundle/dmg/Hanzo Desktop_{version}_aarch64.dmg`
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/macos/Hanzo Desktop.app.tar.gz`
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/macos/Hanzo Desktop.app.tar.gz.sig`
+  -`apps/supra-desktop/src-tauri/target/release/bundle/dmg/Supra Desktop_{version}_aarch64.dmg`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/macos/Supra Desktop.app.tar.gz`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/macos/Supra Desktop.app.tar.gz.sig`
 - Windows
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/nsis/Hanzo Desktop_{version}_x64-setup.exe`
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/nsis/Hanzo Desktop_{version}_x64-setup.nsis.zip`
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/nsis/Hanzo Desktop_{ersion}_x64-setup.nsis.zip.sig`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/nsis/Supra Desktop_{version}_x64-setup.exe`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/nsis/Supra Desktop_{version}_x64-setup.nsis.zip`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/nsis/Supra Desktop_{ersion}_x64-setup.nsis.zip.sig`
 - Linux
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/appimage/hanzo-desktop_{version}_amd64.AppImage`
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/appimage/hanzo-desktop_{version}_amd64.AppImage.tar.gz`
-  - `apps/hanzo-desktop/src-tauri/target/release/bundle/appimage/hanzo-desktop_{version}_amd64.AppImage.tar.gz.sig`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/appimage/supra-desktop_{version}_amd64.AppImage`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/appimage/supra-desktop_{version}_amd64.AppImage.tar.gz`
+  - `apps/supra-desktop/src-tauri/target/release/bundle/appimage/supra-desktop_{version}_amd64.AppImage.tar.gz.sig`
 
 🔗 See for more information on:
 [Windows Installer](https://tauri.app/v1/guides/building/windows) - 
@@ -107,15 +107,15 @@ Once all build artfiacts are genearated and signed:
 
 They are uploaded to a R2 bucket in Cloudflare using the following structure:
 
-`hanzo-desktop/binaries/[development|production]/{arch}/{version}/*`
+`supra-desktop/binaries/[development|production]/{arch}/{version}/*`
 
-IE: `hanzo-desktop/binaries/development/aarch64-apple-darwin/0.5.5/*`
+IE: `supra-desktop/binaries/development/aarch64-apple-darwin/0.5.5/*`
 
-🔗 R2 Bucket DNS: https://download.hanzo.com
+🔗 R2 Bucket DNS: https://download.supra.nexus
 
 ### Distribute
 
-At this point Hanzo Desktop is using the [default flow](https://tauri.app/v1/guides/distribution/updater#checking-for-updates) to deliver updates. It means when app start it fetches a JSON file from the R2 bucket `hanzo-desktop/binaries/development/updates.json` which allow the app determine if there is a new version to be installed for the current platform and where is the corresponding artifact.
+At this point Supra Desktop is using the [default flow](https://tauri.app/v1/guides/distribution/updater#checking-for-updates) to deliver updates. It means when app start it fetches a JSON file from the R2 bucket `supra-desktop/binaries/development/updates.json` which allow the app determine if there is a new version to be installed for the current platform and where is the corresponding artifact.
 
 #### updates.json example
 ```json
@@ -126,7 +126,7 @@ At this point Hanzo Desktop is using the [default flow](https://tauri.app/v1/gui
   "platforms": {
     "darwin-aarch64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNG50TktKVkozbXdiZXdua1pvUFVMT0d2M2pwd2g0RlZvck9zTjNNSHZ6TjJsN2ZtaWpnVzAySzFWSXZxckx0TUF6bmRjUHhiMDhsVVo5MTExcnJLR2I2RXNmOXhWRFFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzExMzk4Nzc0CWZpbGU6U2hpbmthaSBUcmF5LmFwcC50YXIuZ3oKRVE5aC9xSUt3cHpmWEtFVENHS1FCUm42Z2ZYSE5lV1lGVUtYbHdHOEZnMXFJTHBNU1V0czlKaTlxUlNnd1B6SkNhRWdibGpRblRselFqSXdMM2dUQ1E9PQo=",
-      "url": "https://download.hanzo.com/hanzo-desktop/binaries/development/aarch64-apple-darwin/0.5.2.202/Hanzo-Desktop-0.5.2.202_aarch64-apple-darwin.app.tar.gz"
+      "url": "https://download.supra.nexus/supra-desktop/binaries/development/aarch64-apple-darwin/0.5.2.202/Hanzo-Desktop-0.5.2.202_aarch64-apple-darwin.app.tar.gz"
     }
   }
 }
@@ -164,7 +164,7 @@ Technically, there 3 different places where a Tauri app could have the app versi
 - `tauri.conf.json`
 - `src-tauri/cargo.toml`
 
-As Hanzo Desktop is in a monorepository and to simplify the versioning process, it's configured to use the `package.version` attribute from the **root** `package.json` which means versions attributes from `tauri.conf.json`and `src-tauri/cargo.toml` doesn't need to be updated or changed to create new releases.
+As Supra Desktop is in a monorepository and to simplify the versioning process, it's configured to use the `package.version` attribute from the **root** `package.json` which means versions attributes from `tauri.conf.json`and `src-tauri/cargo.toml` doesn't need to be updated or changed to create new releases.
 
 ### Development
 

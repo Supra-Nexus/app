@@ -42,7 +42,7 @@
   <a href="#-examples">Examples</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-development">Development</a> •
-  <a href="https://docs.hanzo.com">Documentation</a>
+  <a href="https://docs.supra.nexus">Documentation</a>
 </p>
 
 ---
@@ -105,11 +105,11 @@ Hanzo is built as a modern monorepo using **NX** for orchestration and dependenc
 
 **Core Applications:**
 
-- **hanzo-desktop** – Cross-platform Tauri application with React frontend
+- **supra-desktop** – Cross-platform Tauri application with React frontend
 
 **Shared Libraries:**
 
-- **hanzo-message-ts** – Message protocols and network communication with Hanzo Node
+- **hanzo-message-ts** – Message protocols and network communication with Supra Node
 - **hanzo-node-state** – React Query-based state management for node data
 - **hanzo-ui** – Reusable React components with design system
 - **hanzo-artifacts** – Styled UI primitives built on Radix and Tailwind CSS
@@ -136,7 +136,7 @@ npm ci
 
 #### 2. Download Required Side Binaries
 
-Before running Hanzo, you'll need to download the embedded Hanzo Node binary that powers the application's core functionality. This can be done with a single command based on your platform:
+Before running Hanzo, you'll need to download the embedded Supra Node binary that powers the application's core functionality. This can be done with a single command based on your platform:
 
 **macOS (Apple Silicon):**
 
@@ -171,17 +171,17 @@ npx ts-node ./ci-scripts/download-side-binaries.ts
 
 ```bash
 # Run desktop app (recommended for development)
-npx nx serve:tauri hanzo-desktop
+npx nx serve:tauri supra-desktop
 ```
 
 #### Building
 
 ```bash
 # Build desktop application
-npx nx build hanzo-desktop
+npx nx build supra-desktop
 
 # Create development build
-NODE_OPTIONS="--max_old_space_size=8192" npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json"
+NODE_OPTIONS="--max_old_space_size=8192" npx nx build supra-desktop --config="./src-tauri/tauri.conf.development.json"
 
 # Build all projects
 npx nx run-many --target=build
@@ -220,7 +220,7 @@ npx nx run-many --target=lint
 ```
 app/
 ├── apps/
-│   └── hanzo-desktop/          # Main desktop application
+│   └── supra-desktop/          # Main desktop application
 ├── libs/
 │   ├── hanzo-message-ts/       # Core messaging protocol
 │   ├── hanzo-node-state/       # State management
@@ -279,7 +279,7 @@ npx nx run hanzo-i18n:i18n
 
 ### 📚 Additional Resources
 
-- **[Official Documentation](https://docs.hanzo.com)** – Comprehensive guides and API reference
+- **[Official Documentation](https://docs.supra.nexus)** – Comprehensive guides and API reference
 - **[Discord Community](https://discord.gg/EuA45U3sEu)** – Get help and connect with other developers
 - **[Twitter Updates](https://x.com/HanzoLocalAI)** – Latest news and announcements
 

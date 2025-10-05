@@ -1,4 +1,4 @@
-import { rejectInvoice as rejectInvoiceApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { rejectInvoice as rejectInvoiceApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type RejectInvoiceInput } from './types';
 

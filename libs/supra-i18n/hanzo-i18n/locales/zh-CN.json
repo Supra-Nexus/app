@@ -160,8 +160,8 @@
     "editMessage": {
       "warning": "这将重新开始您的对话。"
     },
-    "emptyStateDescription": "对于快速问题，请按 ⌘ + Shift + J 使用 Hanzo Spotlight",
-    "emptyStateTitle": "询问 Hanzo AI",
+    "emptyStateDescription": "对于快速问题，请按 ⌘ + Shift + J 使用 Supra Spotlight",
+    "emptyStateTitle": "询问 Supra AI",
     "enterMessage": "输入消息",
     "failedToOpenChatFolder": "请先上传文件到聊天中",
     "fileProcessing": {
@@ -194,7 +194,7 @@
     "form": {
       "message": "消息",
       "messagePlaceholder": "输入您的消息",
-      "hanzoIdentity": "Hanzo身份"
+      "hanzoIdentity": "Supra身份"
     }
   },
   "codeRunner": {
@@ -279,7 +279,7 @@
     "seeOptions": "查看选项",
     "selectItem": "选择项目以查看详情",
     "send": "发送",
-    "hanzoPrivate": "Hanzo私有（本地）",
+    "hanzoPrivate": "Supra私有（本地）",
     "showLess": "显示更少",
     "showMore": "更多",
     "signUpHanzoHosting": "注册Hanzo Hosting",
@@ -333,7 +333,7 @@
       "privacy": "<b>注重隐私：</b> 您的数据在离线环境下保持安全，并具有强大的隐私保护功能。",
       "tools": "<b>日常任务工具：</b> 支持 100 多种集成和持续增加中。"
     },
-    "localAI": "Hanzo 本地 AI",
+    "localAI": "Supra 本地 AI",
     "model": {
       "commandr7bBenefits": {
         "fast": "<b>快速执行：</b> 用户指出它在中档硬件上运行高效，能够更快地响应和更流畅地交互，而不会出现显著的延迟。",
@@ -418,7 +418,7 @@
   },
   "galxe": {
     "errors": {
-      "registerDesktopInstallation": "注册Hanzo Desktop安装时出错。请确保您的EVM地址之前未用于注册其他安装。"
+      "registerDesktopInstallation": "注册Supra Desktop安装时出错。请确保您的EVM地址之前未用于注册其他安装。"
     },
     "form": {
       "evmAddress": "EVM地址",
@@ -430,7 +430,7 @@
     "goToGalxeQuest": "查看我们的Galxe任务",
     "label": "Galxe 任务",
     "success": {
-      "registerDesktopInstallation": "您的Hanzo Desktop安装已成功注册。可能需要几个小时才能在Galxe任务中注册。"
+      "registerDesktopInstallation": "您的Supra Desktop安装已成功注册。可能需要几个小时才能在Galxe任务中注册。"
     }
   },
   "homepage": {
@@ -499,7 +499,7 @@
       "installTitle": "安装人工智能模型"
     },
     "notFound": {
-      "description": "连接您的第一个人工智能以开始向Hanzo AI提问。尝试连接OpenAI",
+      "description": "连接您的第一个人工智能以开始向Supra AI提问。尝试连接OpenAI",
       "title": "没有可用的人工智能"
     },
     "success": {
@@ -730,7 +730,7 @@
   },
   "quickAsk": {
     "emptyStateDescription": "试试\"如何在 JavaScript 中发起 HTTP 请求\"，\"给我 80 年代的十大摇滚音乐\"，\"给我解释一下互联网是如何工作的\"",
-    "emptyStateTitle": "询问 Hanzo AI"
+    "emptyStateTitle": "询问 Supra AI"
   },
   "quickConnection": {
     "connectingToNode": "连接到您的本地Hanzo节点",
@@ -868,14 +868,14 @@
       "checkIdentityInSyncDescription": "检查您的Hanzo身份是否准确同步。",
       "error": "更新Hanzo身份时出错",
       "goToHanzoIdentity": "前往我的Hanzo身份",
-      "label": "Hanzo 身份",
+      "label": "Supra 身份",
       "registerIdentity": "注册您的Hanzo身份",
       "saveWillRestartApp": "保存将重启应用以应用更改",
-      "success": "Hanzo身份更新成功",
+      "success": "Supra身份更新成功",
       "troubleRegisterIdentity": "注册您的身份时遇到问题？",
-      "updatedIdentity": "Hanzo 身份更新成功。"
+      "updatedIdentity": "Supra 身份更新成功。"
     },
-    "hanzoVersion": "Hanzo Desktop版本：",
+    "hanzoVersion": "Supra Desktop版本：",
     "shortcutKey": {
       "description": "修改启动侧边栏的快捷键",
       "label": "快捷键"
@@ -894,7 +894,7 @@
     }
   },
   "hanzoNode": {
-    "manager": "Hanzo 节点管理器",
+    "manager": "Supra 节点管理器",
     "models": {
       "errors": {
         "modelInstalled": "安装模型 {{modelName}} 时出错",

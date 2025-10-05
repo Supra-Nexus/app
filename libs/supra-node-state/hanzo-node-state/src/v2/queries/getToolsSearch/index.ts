@@ -1,4 +1,4 @@
-import { searchTools as searchToolsApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { searchTools as searchToolsApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type GetSearchToolsInput } from './types';
 

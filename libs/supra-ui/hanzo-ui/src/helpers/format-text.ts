@@ -1,4 +1,4 @@
-import { type HanzoToolHeader } from '@hanzo_network/hanzo-message-ts/api/tools/types';
+import { type HanzoToolHeader } from '@supra_network/hanzo-message-ts/api/tools/types';
 
 export const formatText = (text: string) => {
   const camelToSpaces = text.replace(/([a-z])([A-Z])/g, '$1 $2');

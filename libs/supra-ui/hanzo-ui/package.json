@@ -1,5 +1,5 @@
 {
-  "name": "@hanzo_network/hanzo-ui",
+  "name": "@supra_network/hanzo-ui",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",

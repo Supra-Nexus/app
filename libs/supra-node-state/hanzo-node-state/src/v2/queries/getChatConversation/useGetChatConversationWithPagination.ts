@@ -1,4 +1,4 @@
-import { isJobInbox } from '@hanzo_network/hanzo-message-ts/utils';
+import { isJobInbox } from '@supra_network/hanzo-message-ts/utils';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { FunctionKeyV2 } from '../../constants';

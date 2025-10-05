@@ -124,7 +124,7 @@
     },
     "label": "Analitik",
     "moreInfo": "Gizlilik uygulamalarımızla ilgili daha fazla bilgi için lütfen <a>Gizlilik Politikasına</a> bakın",
-    "title": "Hanzo'yi geliştirmemize yardımcı olun"
+    "title": "Supra'yi geliştirmemize yardımcı olun"
   },
   "appReset": {
     "action": "Uygulamayı Sıfırla",
@@ -160,8 +160,8 @@
     "editMessage": {
       "warning": "Bu, sohbetinizi buradan itibaren yeniden başlatacaktır."
     },
-    "emptyStateDescription": "Hızlı sorular için, Hanzo Spotlight'ı kullanmak üzere ⌘ + Shift + J tuşlarına basın",
-    "emptyStateTitle": "Hanzo AI'ye Sor",
+    "emptyStateDescription": "Hızlı sorular için, Supra Spotlight'ı kullanmak üzere ⌘ + Shift + J tuşlarına basın",
+    "emptyStateTitle": "Supra AI'ye Sor",
     "enterMessage": "Mesaj Girin",
     "failedToOpenChatFolder": "Lütfen önce sohbete bir dosya yükleyin",
     "fileProcessing": {
@@ -194,7 +194,7 @@
     "form": {
       "message": "Mesaj",
       "messagePlaceholder": "Mesajınızı girin",
-      "hanzoIdentity": "Hanzo Kimliği"
+      "hanzoIdentity": "Supra Kimliği"
     }
   },
   "codeRunner": {
@@ -249,7 +249,7 @@
     "incomplete": "Tamamlanmamış",
     "install": "Kur",
     "installed": "Yüklü",
-    "logInHanzoHosting": "Hanzo Hosting'e Giriş Yap",
+    "logInHanzoHosting": "Supra Hosting'e Giriş Yap",
     "more": "Daha Fazla",
     "moreOptions": "Daha Fazla Seçenek",
     "next": "İleri",
@@ -282,7 +282,7 @@
     "hanzoPrivate": "Yerel AI'nizi Kurun",
     "showLess": "Daha Az Göster",
     "showMore": "Daha Fazla",
-    "signUpHanzoHosting": "Hanzo Hosting'e Kaydol",
+    "signUpHanzoHosting": "Supra Hosting'e Kaydol",
     "soon": "yakında",
     "termsAndConditionsText": "<a>Hizmet Şartları</a> ve <b>Gizlilik Politikası</b>nı kabul ediyorum",
     "thinking": "Düşünüyor...",
@@ -333,7 +333,7 @@
       "privacy": "<b>Gizlilik Odaklı:</b> Verileriniz çevrimdışı yetenekler ve güçlü gizlilik korumaları ile güvenli kalır.",
       "tools": "<b>Günlük Görevler için Araçlar:</b> 100'den fazla entegrasyonu destekler ve sayısı artmaktadır."
     },
-    "localAI": "Hanzo Yerel AI",
+    "localAI": "Supra Yerel AI",
     "model": {
       "commandr7bBenefits": {
         "fast": "<b>Hızlı Çalışma:</b> Kullanıcılar, orta seviye donanımda verimli çalıştığını ve önemli bir gecikme olmadan daha hızlı yanıtlar ve daha akıcı etkileşimler sağladığını belirtmişlerdir.",
@@ -363,13 +363,13 @@
         "resource": "<b>Verimli Kaynak Kullanımı:</b> Daha büyük modellere kıyasla hafif ve ultra hızlı bir modeldir."
       }
     },
-    "welcome": "Hanzo'ya Hoş Geldiniz",
+    "welcome": "Supra'ya Hoş Geldiniz",
     "welcomeDescription": "Cihazınızda doğrudan AI ajanları oluşturun, çalıştırın ve otomatikleştirin — hızlı, özel ve güvenli."
   },
   "disconnect": {
     "exportConnection": "Devam etmeden önce, lütfen<Link>bağlantınızı dışa aktarın</Link> böylece istediğiniz zaman bağlantınızı geri yükleyebilirsiniz.",
     "modalDescription": "Bağlantıyı kesmek istediğinize emin misiniz? Bu, verilerinizi kalıcı olarak silecektir.",
-    "modalTitle": "Hanzo'yi Bağlantıyı Kes"
+    "modalTitle": "Supra'yi Bağlantıyı Kes"
   },
   "dockerStatus": {
     "dockerInstalledButNotRunning": "Docker Yüklü ama Çalışmıyor",
@@ -384,7 +384,7 @@
   },
   "errors": {
     "nodeUnavailable": {
-      "description": "Hanzo Düğümünüze bağlanmakta zorluk yaşıyoruz. Düğümünüz çevrimdışı olabilir veya internet bağlantınızda bir sorun olabilir.",
+      "description": "Supra Düğümünüze bağlanmakta zorluk yaşıyoruz. Düğümünüz çevrimdışı olabilir veya internet bağlantınızda bir sorun olabilir.",
       "title": "Düğüm Kullanılamıyor"
     }
   },
@@ -399,7 +399,7 @@
     "restoreText": "Bağlantıyı Hanzo Düğümünüze geri yüklemek için şifrenizle birlikte kullanın"
   },
   "extension": {
-    "welcome": "Hanzo Visor ile web tarayıcı deneyiminizi AI ile dönüştürün ✨"
+    "welcome": "Supra Visor ile web tarayıcı deneyiminizi AI ile dönüştürün ✨"
   },
   "feedback": {
     "button": "Geri Bildirim",
@@ -418,7 +418,7 @@
   },
   "galxe": {
     "errors": {
-      "registerDesktopInstallation": "Hanzo Masaüstü kurulumunuzu kaydederken bir hata oluştu. Lütfen EVM Adresinizin daha önce farklı bir kurulumu kaydetmek için kullanılmadığından emin olun."
+      "registerDesktopInstallation": "Supra Masaüstü kurulumunuzu kaydederken bir hata oluştu. Lütfen EVM Adresinizin daha önce farklı bir kurulumu kaydetmek için kullanılmadığından emin olun."
     },
     "form": {
       "evmAddress": "EVM Adresi",
@@ -430,7 +430,7 @@
     "goToGalxeQuest": "Galxe Görevimizi Kontrol Edin",
     "label": "Galxe Görevi",
     "success": {
-      "registerDesktopInstallation": "Hanzo Masaüstü kurulumunuz başarıyla kaydedildi. Galxe görevinde kaydedilmesi birkaç saat sürebilir."
+      "registerDesktopInstallation": "Supra Masaüstü kurulumunuz başarıyla kaydedildi. Galxe görevinde kaydedilmesi birkaç saat sürebilir."
     }
   },
   "homepage": {
@@ -499,7 +499,7 @@
       "installTitle": "Yapay Zeka Modellerini Yükle"
     },
     "notFound": {
-      "description": "İlk yapay zekanızı bağlayarak Hanzo AI ile soru sormaya başlayın. OpenAI'yi bağlamayı deneyin.",
+      "description": "İlk yapay zekanızı bağlayarak Supra AI ile soru sormaya başlayın. OpenAI'yi bağlamayı deneyin.",
       "title": "Mevcut Yapay Zeka Yok"
     },
     "success": {
@@ -534,12 +534,12 @@
   "mcpPage": {
     "exposeToolsDescription": "AI Araçlarınızı MCP aracılığıyla diğer MCP İstemcileriyle sorunsuz bir şekilde entegre edin ve yeteneklerini artırın.",
     "exposeToolsTab": "Araçları Açığa Çıkar",
-    "helpfulLinks": "Hanzo ile bağlantı kurmak için faydalı MCP'leri smithery.ai ve composio.dev adreslerinde bulabilirsiniz.",
+    "helpfulLinks": "Supra ile bağlantı kurmak için faydalı MCP'leri smithery.ai ve composio.dev adreslerinde bulabilirsiniz.",
     "mcpServersDescription": "MCP sunucusuna bağlanarak canlı hava durumu, hisse senedi fiyatları veya çeviri servisleri gibi harici veri kaynaklarına ve araçlara anında erişin; özel entegrasyonlar oluşturmanıza gerek kalmaz.\nBu sayede sisteminiz gerçek zamanlı bilgiler ve yeni kaynaklara kolay erişim ile genişler."
   },
   "mcpServers": {
     "add": "MCP Sunucusu Ekle",
-    "addDescription": "Hanzo Düğümünüzle bağlantı kurmak için yeni bir MCP sunucusu yapılandırın",
+    "addDescription": "Supra Düğümünüzle bağlantı kurmak için yeni bir MCP sunucusu yapılandırın",
     "addFailed": "MCP sunucusu eklenemedi",
     "addFromGitHub": "GitHub'dan Ekle",
     "addSuccess": "MCP sunucusu başarıyla eklendi",
@@ -578,7 +578,7 @@
     "deleteSuccess": "MCP sunucusu başarıyla silindi",
     "environmentVariables": "Ortam Değişkenleri",
     "label": "MCP Sunucuları",
-    "listDescription": "Hanzo Düğümünüze bağlı MCP sunucularının listesi",
+    "listDescription": "Supra Düğümünüze bağlı MCP sunucularının listesi",
     "listOfToolsAvailableFromThisMcpServer": "Bu MCP sunucusundan mevcut olan araçların listesi.",
     "manualSetup": "Manuel Kurulum",
     "name": "İsim",
@@ -636,7 +636,7 @@
     "processingPayment": "Ödeme İşleniyor",
     "publishedTab": "Yayınlanan Ajanlar",
     "registerIdentity": "Kimlik Kaydet",
-    "registerHanzoIdentity": "Hanzo Kimliği Kaydet",
+    "registerHanzoIdentity": "Supra Kimliği Kaydet",
     "registerHanzoIdentityDescription": "Ajanları kullanmak ve yayınlamak için Hanzo ağında benzersiz kimliğinizi oluşturun",
     "removeAgent": "Ajanı Kaldır",
     "removeFailed": "Ajanı kaldırma işlemi başarısız oldu",
@@ -698,8 +698,8 @@
     "createToolDescription": "Güçlü AI araçlarıyla iş akışınızı oluşturun, otomatikleştirin ve optimize edin.",
     "dismiss": "Kontrol Listesini Kapat",
     "getStartedChecklist": "Başlangıç Kontrol Listesi",
-    "getStartedText": "Hanzo ile Başlayın",
-    "setupHanzoDesktop": "Hanzo Masaüstünü Kurun",
+    "getStartedText": "Supra ile Başlayın",
+    "setupHanzoDesktop": "Supra Masaüstünü Kurun",
     "setupHanzoDesktopDescription": "Başlamak için Hanzo Masaüstünü kurun",
     "uploadAFile": "Bir Dosya Yükleyin",
     "uploadAFileDescription": "Notlarınızı, web sitelerinizi, belgelerinizi ve diğerlerini güvenli bir şekilde tek bir yerde saklayın."
@@ -730,7 +730,7 @@
   },
   "quickAsk": {
     "emptyStateDescription": "Şunu deneyin: \\\"JavaScript'te HTTP isteği nasıl yapılır?\\\", \\\"80'lerdeki en iyi 10 rock müziği nedir?\\\", \\\"İnternet nasıl çalışır, açıkla\\\"",
-    "emptyStateTitle": "Hanzo AI'ye Sor"
+    "emptyStateTitle": "Supra AI'ye Sor"
   },
   "quickConnection": {
     "connectingToNode": "Yerel Hanzo Düğümünüze Bağlanıyor",
@@ -810,7 +810,7 @@
       "promptLibrary": "İpucu Kütüphanesi",
       "publicKeys": "Açık Anahtarlar",
       "remoteAccess": "Uzaktan Erişim",
-      "hanzoNode": "Hanzo Düğüm Yöneticisi"
+      "hanzoNode": "Supra Düğüm Yöneticisi"
     },
     "maxChatIterations": {
       "description": "Bir sohbet mesajının işlenmesi için maksimum iterasyon sayısı",
@@ -837,7 +837,7 @@
     },
     "quickAccessButton": {
       "description": "Hızlı Erişim Butonu, tıklayıp basılı tutarak taşınabilir.",
-      "label": "Hanzo Hızlı Erişim Butonunu Göster"
+      "label": "Supra Hızlı Erişim Butonunu Göster"
     },
     "registerNewCode": {
       "label": "Yeni cihaz kaydet"
@@ -864,18 +864,18 @@
       "title": "Uzaktan Erişim"
     },
     "hanzoIdentity": {
-      "checkIdentityInSync": "Hanzo Kimliğini doğrula",
-      "checkIdentityInSyncDescription": "Hanzo kimliğinizin doğru bir şekilde senkronize olduğunu kontrol edin.",
-      "error": "Hanzo Kimliği güncellerken hata",
+      "checkIdentityInSync": "Supra Kimliğini doğrula",
+      "checkIdentityInSyncDescription": "Supra kimliğinizin doğru bir şekilde senkronize olduğunu kontrol edin.",
+      "error": "Supra Kimliği güncellerken hata",
       "goToHanzoIdentity": "Benim Hanzo Kimliğime git",
-      "label": "Hanzo Kimliği",
-      "registerIdentity": "Hanzo Kimliğinizi kaydedin",
+      "label": "Supra Kimliği",
+      "registerIdentity": "Supra Kimliğinizi kaydedin",
       "saveWillRestartApp": "Kaydetme, değişiklikleri uygulamak için uygulamayı yeniden başlatacaktır.",
-      "success": "Hanzo Kimliği başarıyla güncellendi",
+      "success": "Supra Kimliği başarıyla güncellendi",
       "troubleRegisterIdentity": "Kimliğinizi kaydederken sorun mu yaşıyorsunuz?",
-      "updatedIdentity": "Hanzo Kimliği başarıyla güncellendi."
+      "updatedIdentity": "Supra Kimliği başarıyla güncellendi."
     },
-    "hanzoVersion": "Hanzo Masaüstü Sürümü:",
+    "hanzoVersion": "Supra Masaüstü Sürümü:",
     "shortcutKey": {
       "description": "Yan menüyü açmak için kısayol tuşunu değiştirin",
       "label": "Kısayol Tuşu"
@@ -894,7 +894,7 @@
     }
   },
   "hanzoNode": {
-    "manager": "Hanzo Düğüm Yöneticisi",
+    "manager": "Supra Düğüm Yöneticisi",
     "models": {
       "errors": {
         "modelInstalled": "Model {{modelName}} kurulumunda hata oluştu",
@@ -939,14 +939,14 @@
       "syncedOllama": "Yerel Ollama modelleri Hanzo Düğümünüzle senkronize edildi"
     },
     "resetNodeWarning": {
-      "description": "Hanzo Düğümünüz mevcut anahtarlar tarafından kilitlenmiş durumda. Yeniden bağlanmak için tüm Hanzo Düğüm verilerinizi sıfırlayabilirsiniz.",
+      "description": "Supra Düğümünüz mevcut anahtarlar tarafından kilitlenmiş durumda. Yeniden bağlanmak için tüm Hanzo Düğüm verilerinizi sıfırlayabilirsiniz.",
       "option1": "<b>Geri Yükle:</b> Yedeklenmiş anahtarları kullanarak bağlantınızı geri yüklemeyi deneyin.",
       "option2": "<b>Verileri Sıfırla:</b> Tüm Hanzo Düğüm verilerinizi kalıcı olarak silin.",
       "option3": "<b>Tümünü Sıfırla:</b> Şifreleme ve imza anahtarları dahil olmak üzere tüm Hanzo Düğüm verilerinizi kalıcı olarak silin.",
       "title": "Bağlantı sağlanamıyor"
     },
     "restartNode": "Lütfen Hanzo Düğümünüzü yeniden başlatın",
-    "unavailable": "Hanzo Düğümünüz kullanılamıyor"
+    "unavailable": "Supra Düğümünüz kullanılamıyor"
   },
   "tasks": {
     "runNow": "Şimdi Çalıştır"
@@ -981,9 +981,9 @@
       "noProtocols": "Protokol bulunamadı.",
       "otherProtocols": "Diğer protokoller de çalışabilir ancak resmi olarak doğrulanmamıştır.",
       "requestProtocol": "Protokol Talep Et",
-      "hanzoCodeGenerator": "Hanzo Kod Üretici",
+      "hanzoCodeGenerator": "Supra Kod Üretici",
       "hanzoCodeGeneratorDescription": "Özel AI kod üretim aracımızı kullanarak araçlar oluşturur.",
-      "hanzoFreeTrial": "Hanzo Ücretsiz Deneme",
+      "hanzoFreeTrial": "Supra Ücretsiz Deneme",
       "hanzoFreeTrialDescription": "Araçlar oluşturmak için harika, sağladığınız her türlü içerikle çalışır.",
       "hanzoFreeTrialRecommendation": "AI'nin gerektirdiği belgeleri manuel olarak kopyalayıp yapıştırın ve <documentation></documentation> içine yerleştirin.",
       "step1Label": "Adım 1",

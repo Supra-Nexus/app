@@ -160,8 +160,8 @@
     "editMessage": {
       "warning": "Ini akan memulai ulang percakapan Anda dari sini."
     },
-    "emptyStateDescription": "Untuk pertanyaan cepat, tekan ⌘ + Shift + J untuk menggunakan Hanzo Spotlight",
-    "emptyStateTitle": "Tanyakan kepada Hanzo AI",
+    "emptyStateDescription": "Untuk pertanyaan cepat, tekan ⌘ + Shift + J untuk menggunakan Supra Spotlight",
+    "emptyStateTitle": "Tanyakan kepada Supra AI",
     "enterMessage": "Masukkan Pesan",
     "failedToOpenChatFolder": "Silakan unggah file ke obrolan terlebih dahulu",
     "fileProcessing": {
@@ -279,7 +279,7 @@
     "seeOptions": "Lihat Opsi",
     "selectItem": "Pilih item untuk melihat detail",
     "send": "Kirim",
-    "hanzoPrivate": "Hanzo Pribadi (Lokal)",
+    "hanzoPrivate": "Supra Pribadi (Lokal)",
     "showLess": "Tampilkan Lebih Sedikit",
     "showMore": "Lebih Banyak",
     "signUpHanzoHosting": "Daftar untuk Hosting Hanzo",
@@ -499,7 +499,7 @@
       "installTitle": "Pasang Model AI"
     },
     "notFound": {
-      "description": "Sambungkan AI pertama Anda untuk mulai bertanya kepada Hanzo AI. Coba sambungkan OpenAI",
+      "description": "Sambungkan AI pertama Anda untuk mulai bertanya kepada Supra AI. Coba sambungkan OpenAI",
       "title": "Tidak Ada AI Tersedia"
     },
     "success": {
@@ -730,7 +730,7 @@
   },
   "quickAsk": {
     "emptyStateDescription": "Coba tanyakan \\\"Bagaimana cara membuat permintaan HTTP di JavaScript\\\", \\\"Berikan saya 10 lagu rock terbaik di tahun 80-an\\\", \\\"Jelaskan bagaimana internet bekerja\\\"",
-    "emptyStateTitle": "Tanya Hanzo AI"
+    "emptyStateTitle": "Tanya Supra AI"
   },
   "quickConnection": {
     "connectingToNode": "Menghubungkan ke Node Hanzo lokal Anda",

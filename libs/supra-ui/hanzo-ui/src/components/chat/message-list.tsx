@@ -1,4 +1,4 @@
-import { type ChatConversationInfiniteData } from '@hanzo_network/hanzo-node-state/v2/queries/getChatConversation/types';
+import { type ChatConversationInfiniteData } from '@supra_network/hanzo-node-state/v2/queries/getChatConversation/types';
 import {
   type FetchPreviousPageOptions,
   type InfiniteQueryObserverResult,

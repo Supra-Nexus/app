@@ -1,7 +1,7 @@
 import {
   sendMessageToJob as sendMessageToJobApi,
   uploadFilesToJob,
-} from '@hanzo_network/hanzo-message-ts/api/jobs/index';
+} from '@supra_network/hanzo-message-ts/api/jobs/index';
 
 import { type SendMessageToJobInput } from './types';
 

@@ -1,13 +1,13 @@
-import { ToolStatusType } from '@hanzo_network/hanzo-message-ts/api/general/types';
+import { ToolStatusType } from '@supra_network/hanzo-message-ts/api/general/types';
 import {
   downloadFile,
   getJobFolderName,
   getLastMessagesWithBranches,
   getProviderFromJob,
-} from '@hanzo_network/hanzo-message-ts/api/jobs/index';
-import { type ChatMessage } from '@hanzo_network/hanzo-message-ts/api/jobs/types';
-import { getHanzoFileProtocol } from '@hanzo_network/hanzo-message-ts/api/tools/index';
-import { extractJobIdFromInbox } from '@hanzo_network/hanzo-message-ts/utils/inbox_name_handler';
+} from '@supra_network/hanzo-message-ts/api/jobs/index';
+import { type ChatMessage } from '@supra_network/hanzo-message-ts/api/jobs/types';
+import { getHanzoFileProtocol } from '@supra_network/hanzo-message-ts/api/tools/index';
+import { extractJobIdFromInbox } from '@supra_network/hanzo-message-ts/utils/inbox_name_handler';
 
 import { generateFilePreview } from '../../utils/file-preview';
 import {

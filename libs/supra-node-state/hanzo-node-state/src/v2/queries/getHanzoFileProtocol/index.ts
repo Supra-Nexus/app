@@ -1,4 +1,4 @@
-import { getHanzoFileProtocol as getHanzoFileProtocolApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { getHanzoFileProtocol as getHanzoFileProtocolApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { generateFilePreview } from '../../utils/file-preview';
 import  {

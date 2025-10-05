@@ -171,17 +171,17 @@ npx ts-node ./ci-scripts/download-side-binaries.ts
 
 ```bash
 # Run desktop app (recommended for development)
-npx nx serve:tauri hanzo-desktop
+npx nx serve:tauri supra-desktop
 ```
 
 ＃＃＃＃ 建物
 
 ```bash
 # Build desktop application
-npx nx build hanzo-desktop
+npx nx build supra-desktop
 
 # Create development build
-NODE_OPTIONS="--max_old_space_size=8192" npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json"
+NODE_OPTIONS="--max_old_space_size=8192" npx nx build supra-desktop --config="./src-tauri/tauri.conf.development.json"
 
 # Build all projects
 npx nx run-many --target=build
@@ -220,7 +220,7 @@ npx nx run-many --target=lint
 ```
 app/
 ├── apps/
-│   └── hanzo-desktop/          # Main desktop application
+│   └── supra-desktop/          # Main desktop application
 ├── libs/
 │   ├── hanzo-message-ts/       # Core messaging protocol
 │   ├── hanzo-node-state/       # State management

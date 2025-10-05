@@ -1,4 +1,4 @@
-import { retrieveFilesForJob as retrieveFilesForJobApi } from '@hanzo_network/hanzo-message-ts/api/vector-fs/index';
+import { retrieveFilesForJob as retrieveFilesForJobApi } from '@supra_network/hanzo-message-ts/api/vector-fs/index';
 
 import { type GetJobContentsInput } from './types';
 

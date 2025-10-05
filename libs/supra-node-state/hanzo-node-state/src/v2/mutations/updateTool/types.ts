@@ -1,9 +1,9 @@
-import { type Token } from '@hanzo_network/hanzo-message-ts/api/general/types';
+import { type Token } from '@supra_network/hanzo-message-ts/api/general/types';
 import {
   type HanzoTool,
   type HanzoToolType,
   type UpdateToolResponse,
-} from '@hanzo_network/hanzo-message-ts/api/tools/types';
+} from '@supra_network/hanzo-message-ts/api/tools/types';
 
 export type UpdateToolOutput = UpdateToolResponse;
 

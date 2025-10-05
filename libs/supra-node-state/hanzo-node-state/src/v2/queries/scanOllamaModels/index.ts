@@ -1,4 +1,4 @@
-import { scanOllamaModels as scanOllamaModelsApi } from '@hanzo_network/hanzo-message-ts/api/ollama';
+import { scanOllamaModels as scanOllamaModelsApi } from '@supra_network/hanzo-message-ts/api/ollama';
 
 import { type ScanOllamaModelsInput } from './types';
 

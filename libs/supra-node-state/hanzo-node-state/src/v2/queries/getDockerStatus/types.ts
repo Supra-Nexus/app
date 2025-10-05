@@ -1,4 +1,4 @@
-import { type DockerStatusResponse } from '@hanzo_network/hanzo-message-ts/api/general/types';
+import { type DockerStatusResponse } from '@supra_network/hanzo-message-ts/api/general/types';
 import { type QueryObserverOptions } from '@tanstack/react-query';
 
 import { type FunctionKeyV2 } from '../../constants';

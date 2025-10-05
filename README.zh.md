@@ -42,7 +42,7 @@ Hanzo是一个免费的开源平台，使AI代理创建民主化。
 <a href =“＃ - 示例”>示例</a>•
 <a href =“＃ - 快速启动”>快速启动</a>•
 <a href =“＃ - 开发”>开发</a>•
-<a href =“ https://docs.hanzo.com”>文档</a>
+<a href =“ https://docs.supra.nexus”>文档</a>
 </p>
 
 ---
@@ -105,7 +105,7 @@ Hanzo是用** nx **进行编排和依赖管理的现代Monorepo建造的。该�
 
 **核心应用程序：**
 
--  ** hanzo-desktop **  - 跨平台陶里（Tauri Tauri）应用于React前端
+-  ** supra-desktop **  - 跨平台陶里（Tauri Tauri）应用于React前端
 
 **共享库：**
 
@@ -171,17 +171,17 @@ npx ts-node ./ci-scripts/download-side-binaries.ts
 
 ```bash
 # Run desktop app (recommended for development)
-npx nx serve:tauri hanzo-desktop
+npx nx serve:tauri supra-desktop
 ```
 
 ＃＃＃＃ 建筑
 
 ```bash
 # Build desktop application
-npx nx build hanzo-desktop
+npx nx build supra-desktop
 
 # Create development build
-NODE_OPTIONS="--max_old_space_size=8192" npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json"
+NODE_OPTIONS="--max_old_space_size=8192" npx nx build supra-desktop --config="./src-tauri/tauri.conf.development.json"
 
 # Build all projects
 npx nx run-many --target=build
@@ -220,7 +220,7 @@ npx nx run-many --target=lint
 ```
 app/
 ├── apps/
-│   └── hanzo-desktop/          # Main desktop application
+│   └── supra-desktop/          # Main desktop application
 ├── libs/
 │   ├── hanzo-message-ts/       # Core messaging protocol
 │   ├── hanzo-node-state/       # State management
@@ -279,7 +279,7 @@ npx nx run hanzo-i18n:i18n
 
 ###📚其他资源
 
--  ** [官方文档]（https://docs.hanzo.com）**  - 全面的指南和API参考
+-  ** [官方文档]（https://docs.supra.nexus）**  - 全面的指南和API参考
 -  ** [DISCORD社区]（https：//discord.gg/eua45u3seu）**  - 获得帮助并与其他开发人员建立联系
 -  ** [Twitter更新]（https://x.com/hanzolocalai）**  - 最新新闻和公告
 

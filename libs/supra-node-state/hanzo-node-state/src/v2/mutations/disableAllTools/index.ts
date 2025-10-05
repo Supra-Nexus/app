@@ -1,4 +1,4 @@
-import { disableAllTools as disableAllToolsApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { disableAllTools as disableAllToolsApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type DisableAllToolsInput } from './types';
 

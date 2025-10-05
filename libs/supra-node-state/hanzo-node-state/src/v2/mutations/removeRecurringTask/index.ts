@@ -1,4 +1,4 @@
-import { removeRecurringTask as removeRecurringTaskApi } from '@hanzo_network/hanzo-message-ts/api/recurring-tasks/index';
+import { removeRecurringTask as removeRecurringTaskApi } from '@supra_network/hanzo-message-ts/api/recurring-tasks/index';
 
 import { type RemoveRecurringTaskInput } from './types';
 

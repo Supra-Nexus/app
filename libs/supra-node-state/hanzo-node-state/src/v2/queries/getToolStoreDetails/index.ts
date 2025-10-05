@@ -1,4 +1,4 @@
-import { getToolStoreDetails as getToolStoreDetailsApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { getToolStoreDetails as getToolStoreDetailsApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type GetToolStoreDetailsInput } from './types';
 

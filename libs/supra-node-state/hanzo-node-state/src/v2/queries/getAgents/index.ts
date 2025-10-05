@@ -1,4 +1,4 @@
-import { getAgents as getAgentsApi } from '@hanzo_network/hanzo-message-ts/api/agents/index';
+import { getAgents as getAgentsApi } from '@supra_network/hanzo-message-ts/api/agents/index';
 
 import  { type GetAgentsInput } from './types';
 

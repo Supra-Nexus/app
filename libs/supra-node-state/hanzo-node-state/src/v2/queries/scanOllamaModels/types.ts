@@ -1,4 +1,4 @@
-import { type ScanOllamaModelsResponse } from '@hanzo_network/hanzo-message-ts/api/ollama';
+import { type ScanOllamaModelsResponse } from '@supra_network/hanzo-message-ts/api/ollama';
 
 export type ScanOllamaModelsInput = {
   nodeAddress: string;

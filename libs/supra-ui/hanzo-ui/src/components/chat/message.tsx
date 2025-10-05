@@ -1,13 +1,13 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslation } from '@hanzo_network/hanzo-i18n';
+import { useTranslation } from '@supra_network/hanzo-i18n';
 import {
   type ToolArgs,
   ToolStatusType,
-} from '@hanzo_network/hanzo-message-ts/api/general/types';
+} from '@supra_network/hanzo-message-ts/api/general/types';
 import {
   type Artifact,
   type FormattedMessage,
-} from '@hanzo_network/hanzo-node-state/v2/queries/getChatConversation/types';
+} from '@supra_network/hanzo-node-state/v2/queries/getChatConversation/types';
 import { format } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Edit3, Loader2, RotateCcw, XCircle } from 'lucide-react';
@@ -220,7 +220,7 @@ const MessageBase = ({
         <a href={`#${messageId}`}>
           <Avatar className={cn('mt-1 h-8 w-8')}>
             {message.role === 'assistant' ? (
-              <img alt="Hanzo AI" src={appIcon} />
+              <img alt="Supra AI" src={appIcon} />
             ) : null}
           </Avatar>
         </a>

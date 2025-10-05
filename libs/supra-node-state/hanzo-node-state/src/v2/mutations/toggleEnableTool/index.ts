@@ -1,4 +1,4 @@
-import { toggleEnableTool as toggleEnableToolApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { toggleEnableTool as toggleEnableToolApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type ToggleEnableToolInput } from './types';
 

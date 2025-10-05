@@ -1,4 +1,4 @@
-import { restoreCoinbaseMPCWallet as restoreCoinbaseMPCWalletApi } from '@hanzo_network/hanzo-message-ts/api/wallets';
+import { restoreCoinbaseMPCWallet as restoreCoinbaseMPCWalletApi } from '@supra_network/hanzo-message-ts/api/wallets';
 
 import { type RestoreCoinbaseMpcWalletInput } from './types';
 

@@ -1,4 +1,4 @@
-import { updateChatConfig as updateChatConfigApi } from '@hanzo_network/hanzo-message-ts/api/jobs/index';
+import { updateChatConfig as updateChatConfigApi } from '@supra_network/hanzo-message-ts/api/jobs/index';
 
 import { type UpdateChatConfigInput } from './types';
 

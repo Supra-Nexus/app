@@ -98,14 +98,14 @@ export default {
     },
   },
   quickAsk: {
-    emptyStateTitle: 'Ask Hanzo AI',
+    emptyStateTitle: 'Ask Supra AI',
     emptyStateDescription:
       'Try "How to make a HTTP request in JavaScript" , "Give me the top 10 rock music in the 80s", "Explain me how internet works"',
   },
   chat: {
     chats: 'Chats',
     agents: 'Agents',
-    emptyStateTitle: 'Ask Hanzo AI',
+    emptyStateTitle: 'Ask Supra AI',
     emptyStateDescription:
       'For quick questions, press ⌘ + Shift + J to use Hanzo Spotlight',
     create: 'Create AI Chat',
@@ -315,8 +315,8 @@ export default {
   onboardingChecklist: {
     getStartedText: 'Get Started with Hanzo',
     getStartedChecklist: 'Get started checklist',
-    setupHanzoDesktop: 'Setup Hanzo Desktop',
-    setupHanzoDesktopDescription: 'Setup Hanzo Desktop to get started',
+    setupHanzoDesktop: 'Setup Supra Desktop',
+    setupHanzoDesktopDescription: 'Setup Supra Desktop to get started',
     addAIAgent: 'Create your AI Agent',
     addAIAgentDescription:
       'Add a customized AI agent tailored to to your specific needs.',
@@ -422,7 +422,7 @@ export default {
       label: 'Language',
       selectLanguage: 'Select Language',
     },
-    hanzoVersion: 'Hanzo Desktop Version:',
+    hanzoVersion: 'Supra Desktop Version:',
     shortcutKey: {
       label: 'Shortcut Key',
       description: 'Modify the shortcut key to launch sidebar',
@@ -642,7 +642,7 @@ export default {
     notFound: {
       title: 'No available AIs',
       description:
-        'Connect your first AI to start asking Hanzo AI. Try connecting OpenAI',
+        'Connect your first AI to start asking Supra AI. Try connecting OpenAI',
     },
     localAI: {
       installTitle: 'Install AI Models',
@@ -698,11 +698,11 @@ export default {
     },
     success: {
       registerDesktopInstallation:
-        'Your Hanzo Desktop installation was registered successfully. It may take some hours to be registered in Galxe quest.',
+        'Your Supra Desktop installation was registered successfully. It may take some hours to be registered in Galxe quest.',
     },
     errors: {
       registerDesktopInstallation:
-        'Error registering your Hanzo Desktop installation. Please ensure your EVM Address was not used previously to register a different installation.',
+        'Error registering your Supra Desktop installation. Please ensure your EVM Address was not used previously to register a different installation.',
     },
   },
   mcpServers: {

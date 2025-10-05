@@ -1,4 +1,4 @@
-import { removePrompt as removePromptApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { removePrompt as removePromptApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type RemovePromptInput } from './types';
 

@@ -1,7 +1,7 @@
 import {
   removePlaygroundTool as removePlaygroundToolApi,
   removeTool as removeToolApi,
-} from '@hanzo_network/hanzo-message-ts/api/tools/index';
+} from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type RemoveToolInput } from './types';
 

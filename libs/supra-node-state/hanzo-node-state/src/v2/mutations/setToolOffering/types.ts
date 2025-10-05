@@ -1,8 +1,8 @@
-import { type Token } from '@hanzo_network/hanzo-message-ts/api/general/types';
+import { type Token } from '@supra_network/hanzo-message-ts/api/general/types';
 import {
   type ToolOffering,
   type SetToolOfferingResponse,
-} from '@hanzo_network/hanzo-message-ts/api/tools/types';
+} from '@supra_network/hanzo-message-ts/api/tools/types';
 
 export type SetToolOfferingOutput = SetToolOfferingResponse;
 

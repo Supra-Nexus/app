@@ -42,7 +42,7 @@ Lea esto en:
 <a href = "#-ejemplos"> ejemplos </a> •
 <a href = "#-Quick-start"> inicio rápido </a> •
 <a href = "#-desarrollo"> desarrollo </a> •
-<a href = "https://docs.hanzo.com"> Documentación </a>
+<a href = "https://docs.supra.nexus"> Documentación </a>
 </p>
 
 ---
@@ -109,7 +109,7 @@ Hanzo se construye como un monoreso moderno que usa ** nx ** para la orquestaci�
 
 ** Bibliotecas compartidas: **
 
--** Hanzo-Message-TS **-Protocolos de mensajes y comunicación de red con Hanzo Node
+-** Hanzo-Message-TS **-Protocolos de mensajes y comunicación de red con Supra Node
 -** Hanzo-Node-State **-Gestión de estado basada en consultas de reacción para datos de nodo
 - ** Hanzo-ui **- Componentes reactivos reutilizables con sistema de diseño
 - ** Hanzo-Artifacts **- Primitivas de usuario de estilo construidas en Radix y CSS de viento de cola
@@ -171,17 +171,17 @@ npx ts-node ./ci-scripts/download-side-binaries.ts
 
 ```bash
 # Run desktop app (recommended for development)
-npx nx serve:tauri hanzo-desktop
+npx nx serve:tauri supra-desktop
 ```
 
 #### Edificio
 
 ```bash
 # Build desktop application
-npx nx build hanzo-desktop
+npx nx build supra-desktop
 
 # Create development build
-NODE_OPTIONS="--max_old_space_size=8192" npx nx build hanzo-desktop --config="./src-tauri/tauri.conf.development.json"
+NODE_OPTIONS="--max_old_space_size=8192" npx nx build supra-desktop --config="./src-tauri/tauri.conf.development.json"
 
 # Build all projects
 npx nx run-many --target=build
@@ -220,7 +220,7 @@ npx nx run-many --target=lint
 ```
 app/
 ├── apps/
-│   └── hanzo-desktop/          # Main desktop application
+│   └── supra-desktop/          # Main desktop application
 ├── libs/
 │   ├── hanzo-message-ts/       # Core messaging protocol
 │   ├── hanzo-node-state/       # State management
@@ -279,7 +279,7 @@ npx nx run hanzo-i18n:i18n
 
 ### 📚 Recursos adicionales
 
-- ** [Documentación oficial] (https://docs.hanzo.com) ** - Guías integrales y referencia de API
+- ** [Documentación oficial] (https://docs.supra.nexus) ** - Guías integrales y referencia de API
 - ** [Discord Community] (https://discord.gg/eua45u3seu) ** - Obtenga ayuda y conéctese con otros desarrolladores
 - ** [Actualizaciones de Twitter] (https://x.com/hanzolocalai) ** - Últimas noticias y anuncios
 

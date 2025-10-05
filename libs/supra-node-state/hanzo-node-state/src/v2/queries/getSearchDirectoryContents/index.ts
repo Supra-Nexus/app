@@ -1,4 +1,4 @@
-import { getSearchDirectoryContents as getSearchDirectoryContentsApi } from '@hanzo_network/hanzo-message-ts/api/vector-fs/index';
+import { getSearchDirectoryContents as getSearchDirectoryContentsApi } from '@supra_network/hanzo-message-ts/api/vector-fs/index';
 
 import { type GetSearchDirectoryContentsInput } from './types';
 

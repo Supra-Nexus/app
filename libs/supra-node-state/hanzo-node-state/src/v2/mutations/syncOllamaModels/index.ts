@@ -1,7 +1,7 @@
 import {
   addOllamaModels,
   scanOllamaModels,
-} from '@hanzo_network/hanzo-message-ts/api/ollama';
+} from '@supra_network/hanzo-message-ts/api/ollama';
 
 import { type SyncOllamaModelsInput } from './types';
 

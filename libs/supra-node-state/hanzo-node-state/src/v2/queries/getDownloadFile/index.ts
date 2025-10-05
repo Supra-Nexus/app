@@ -1,4 +1,4 @@
-import { downloadFile as downloadFileApi } from '@hanzo_network/hanzo-message-ts/api/jobs/index';
+import { downloadFile as downloadFileApi } from '@supra_network/hanzo-message-ts/api/jobs/index';
 
 import { type GetDownloadFileInput } from './types';
 

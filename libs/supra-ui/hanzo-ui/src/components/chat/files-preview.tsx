@@ -2,7 +2,7 @@ import { DialogClose } from '@radix-ui/react-dialog';
 import {
   type Attachment,
   FileTypeSupported,
-} from '@hanzo_network/hanzo-node-state/v2/queries/getChatConversation/types';
+} from '@supra_network/hanzo-node-state/v2/queries/getChatConversation/types';
 import { save } from '@tauri-apps/plugin-dialog';
 import * as fs from '@tauri-apps/plugin-fs';
 import { BaseDirectory } from '@tauri-apps/plugin-fs';

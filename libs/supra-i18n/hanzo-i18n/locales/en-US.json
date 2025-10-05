@@ -73,20 +73,20 @@
   "chatDM": {
     "create": "Create DM Chat",
     "form": {
-      "hanzoIdentity": "Hanzo Identity",
+      "hanzoIdentity": "Supra Identity",
       "message": "Message",
       "messagePlaceholder": "Enter your message"
     }
   },
   "quickAsk": {
-    "emptyStateTitle": "Ask Hanzo AI",
+    "emptyStateTitle": "Ask Supra AI",
     "emptyStateDescription": "Try \"How to make a HTTP request in JavaScript\" , \"Give me the top 10 rock music in the 80s\", \"Explain me how internet works\""
   },
   "chat": {
     "chats": "Chats",
     "agents": "Agents",
-    "emptyStateTitle": "Ask Hanzo AI",
-    "emptyStateDescription": "For quick questions, press ⌘ + Shift + J to use Hanzo Spotlight",
+    "emptyStateTitle": "Ask Supra AI",
+    "emptyStateDescription": "For quick questions, press ⌘ + Shift + J to use Supra Spotlight",
     "create": "Create AI Chat",
     "allMessagesLoaded": "All previous messages have been loaded ✅",
     "limitReachedTitle": "Limit Reached",
@@ -278,8 +278,8 @@
   "onboardingChecklist": {
     "getStartedText": "Get Started with Hanzo",
     "getStartedChecklist": "Get started checklist",
-    "setupHanzoDesktop": "Setup Hanzo Desktop",
-    "setupHanzoDesktopDescription": "Setup Hanzo Desktop to get started",
+    "setupHanzoDesktop": "Setup Supra Desktop",
+    "setupHanzoDesktopDescription": "Setup Supra Desktop to get started",
     "addAIAgent": "Create your AI Agent",
     "addAIAgentDescription": "Add a customized AI agent tailored to to your specific needs.",
     "createAIChatWithAgent": "Create Chat with AI Agent",
@@ -333,15 +333,15 @@
       }
     },
     "hanzoIdentity": {
-      "label": "Hanzo Identity",
-      "updatedIdentity": "Hanzo Identity updated successfully.",
-      "registerIdentity": "Register your Hanzo Identity",
+      "label": "Supra Identity",
+      "updatedIdentity": "Supra Identity updated successfully.",
+      "registerIdentity": "Register your Supra Identity",
       "troubleRegisterIdentity": "Trouble registering your Identity?",
       "saveWillRestartApp": "Save will restart the App to apply changes",
-      "goToHanzoIdentity": "Go to My Hanzo Identity",
-      "success": "Hanzo Identity updated successfully",
-      "error": "Error updating Hanzo Identity",
-      "checkIdentityInSync": "Verify Hanzo Identity",
+      "goToHanzoIdentity": "Go to My Supra Identity",
+      "success": "Supra Identity updated successfully",
+      "error": "Error updating Supra Identity",
+      "checkIdentityInSync": "Verify Supra Identity",
       "checkIdentityInSyncDescription": "Check that your hanzo identity are accurately in sync."
     },
     "general": "General",
@@ -375,7 +375,7 @@
       "label": "Language",
       "selectLanguage": "Select Language"
     },
-    "hanzoVersion": "Hanzo Desktop Version:",
+    "hanzoVersion": "Supra Desktop Version:",
     "shortcutKey": {
       "label": "Shortcut Key",
       "description": "Modify the shortcut key to launch sidebar"
@@ -584,7 +584,7 @@
     "switch": "Switch AI",
     "notFound": {
       "title": "No available AIs",
-      "description": "Connect your first AI to start asking Hanzo AI. Try connecting OpenAI"
+      "description": "Connect your first AI to start asking Supra AI. Try connecting OpenAI"
     },
     "localAI": {
       "installTitle": "Install AI Models",
@@ -636,10 +636,10 @@
       "registerInstallation": "Register Installation"
     },
     "success": {
-      "registerDesktopInstallation": "Your Hanzo Desktop installation was registered successfully. It may take some hours to be registered in Galxe quest."
+      "registerDesktopInstallation": "Your Supra Desktop installation was registered successfully. It may take some hours to be registered in Galxe quest."
     },
     "errors": {
-      "registerDesktopInstallation": "Error registering your Hanzo Desktop installation. Please ensure your EVM Address was not used previously to register a different installation."
+      "registerDesktopInstallation": "Error registering your Supra Desktop installation. Please ensure your EVM Address was not used previously to register a different installation."
     }
   },
   "mcpServers": {
@@ -724,9 +724,9 @@
       "noProtocols": "No protocols found .",
       "otherProtocols": "Other protocols may also work but haven't been officially verified.",
       "requestProtocol": "Request Protocol",
-      "hanzoCodeGenerator": "Hanzo Code Generator",
+      "hanzoCodeGenerator": "Supra Code Generator",
       "hanzoCodeGeneratorDescription": "Builds tools using our specialized AI code-generation tool.",
-      "hanzoFreeTrial": "Hanzo Free Trial",
+      "hanzoFreeTrial": "Supra Free Trial",
       "hanzoFreeTrialDescription": "Great for building tools, works with any content you provide.",
       "hanzoFreeTrialRecommendation": "Manually copy and paste the documentation that the AI requires and place it inside <documentation></documentation>.",
       "customModel": "Custom Model",
@@ -1024,7 +1024,7 @@
     "setupRequired": "Setup required to use paid agents and publish agents",
     "removeSuccess": "Network agent removed successfully",
     "removeFailed": "Failed to remove agent",
-    "registerHanzoIdentity": "Register Hanzo Identity",
+    "registerHanzoIdentity": "Register Supra Identity",
     "registerHanzoIdentityDescription": "Create your unique identity on the Hanzo network to use and publish agents",
     "registerIdentity": "Register Identity",
     "connectWallet": "Connect Wallet",

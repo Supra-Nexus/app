@@ -5,7 +5,7 @@ export const submitFeedback = async (payload: SubmitFeedbackRequest) => {
   const response = await httpClient.post('https://formspree.io/f/mgvawbkv', {
     feedback: payload.feedback,
     contact: payload.contact,
-    source: payload.source || 'hanzo-desktop-app',
+    source: payload.source || 'supra-desktop-app',
   });
 
   return response.data;

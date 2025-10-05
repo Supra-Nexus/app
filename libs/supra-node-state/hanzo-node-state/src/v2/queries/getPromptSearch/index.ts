@@ -1,4 +1,4 @@
-import { searchPrompt as searchPromptApi } from '@hanzo_network/hanzo-message-ts/api/tools/index';
+import { searchPrompt as searchPromptApi } from '@supra_network/hanzo-message-ts/api/tools/index';
 
 import { type GetPromptSearchInput } from './types';
 

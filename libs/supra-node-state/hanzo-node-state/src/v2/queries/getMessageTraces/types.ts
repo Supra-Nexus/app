@@ -1,8 +1,8 @@
-import { type Token } from '@hanzo_network/hanzo-message-ts/api/general/types';
+import { type Token } from '@supra_network/hanzo-message-ts/api/general/types';
 import {
   type GetMessageTracesRequest,
   type GetMessageTracesResponse,
-} from '@hanzo_network/hanzo-message-ts/api/jobs/types';
+} from '@supra_network/hanzo-message-ts/api/jobs/types';
 import { type UseQueryOptions } from '@tanstack/react-query';
 import { type FunctionKeyV2 } from '../../constants';
 
